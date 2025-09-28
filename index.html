@@ -1,17 +1,11 @@
 <!--
   Name: Prince Pamintuan
-  Date: September 27, 2025
-  Commit: Inital Commit of Project Files
+  Date: September 28, 2025
+  Commit: Additional Initial Files and Home Page Layout
 
   Commit:
-  1. Files
-    - index.html
-    - styles.css
-    - main.js
-    - .gitignore
-    2. Folders
-    - css
-    - js
+  1. Character and Lightcone Page
+  2. Layout of Home Page (index.html)
 -->
 
 <!DOCTYPE html>
@@ -20,11 +14,31 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="css/styles.css"/>
+    <script src="js/main.js"></script>
   </head>
-  <script src="js/main.js"></script>
 
   <body>
-    <h1>Astral Codex</h1>
-    <p>The Wikipedia of Honkai: Star Rail</p>
+    <!-- Navigation Bar Component -->
+    <div class="navbar"></div>
+
+    <!-- Sidebar Component -->
+    <div class="sidebar">
+      <header>
+        <div class="text">ASTRAL CODEX</div>
+      </header>
+    </div>
+
+    <!-- Search Engine -->
+    <div id="search-container">
+      <h1>Astral Codex</h1>
+      <p>The Wikipedia of Honkai: Star Rail</p>
+
+      <div id="search-bar">
+        <form action="">
+          <input type="text" placeholder="Trailblaze something..." name="search" />
+          <button type="submit">Search Icon</button>
+        </form>
+      </div>
+    </div>
   </body>
 </html>
