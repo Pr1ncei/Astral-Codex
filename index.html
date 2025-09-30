@@ -19,15 +19,26 @@
 
   <body>
     <!-- Navigation Bar Component -->
-    <div class="navbar"></div>
+    <div class="navbar">
+        <div id="sidebar" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#">Home</a>
+            <a href="#">Characters</a>
+            <a href="#">Lightcones</a>
+            <a href="#">Locations</a>
+        </div>
+
+
+        <span onclick="openNav()"><button id="menu-button">Menu Icon</button></span>
+        <h1>ASTRAL CODEX</h1>
+    </div>
 
     <!-- Sidebar Component -->
-    <div class="sidebar">
+    <!-- <div class="sidebar">
       <header>
         <div class="text">ASTRAL CODEX</div>
       </header>
-    </div>
-
+    </div> -->
     <!-- Search Engine -->
     <div id="search-container">
       <h1>Astral Codex</h1>

@@ -1,0 +1,92 @@
+/*
+  Name: Prince Pamintuan
+  Date: September 30, 2025
+  Commit: Initial CSS and JS of Home Page (index.html)
+
+  Commit:
+  1. Added basic styles for body and navbar.
+  2. Styled the search container to be centered with a white background and rounded corners.
+  3. Added styles for a sidebar navigation (sidenav) with open and close functionality.
+  */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Placeholder */
+html, body {
+    background-color: rgb(3, 0, 52);
+    margin: 0;
+    height: 100%;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    background-color: rgb(255, 255, 255);
+    line-height: 60px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+} 
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #ffffff;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #000000;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.navbar h1 {
+    font-size: 24px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+
+
+#search-container {
+    display: flex;
+    padding: 2rem;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
