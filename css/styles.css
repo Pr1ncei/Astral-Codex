@@ -177,6 +177,55 @@ body::before {
     font-size: 200px;
     font-style: normal;
     font-weight: 1;
+
+    text-shadow: 0 4px 4px rgba(0,0,0,0.25);
+}
+
+#search-container p {
+    font-size: 25px;
+    margin-top: 10px;
+}
+
+#search-bar {
+    width: 100%;
+    max-width: 600px;
+    margin-top: 40px;
+    background-color: #E2E2E2;
+    display: flex;
+    align-items: center;
+    border-radius: 99px;
+    padding: 10px 20px;
+    position: relative;
+}
+
+#search-bar form {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#search-bar input {
+    flex-grow: 1;
+    border: none;
+    background-color: transparent;
+    border: 0;
+    outline: none;
+    line-height: normal;
+    text-align: left;
+    padding-right: 15px;
+
+}
+
+#search-bar button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+#search-bar button img {
+    height: 40px;
+    width: 40px;
 }
 
 #menu-button {
