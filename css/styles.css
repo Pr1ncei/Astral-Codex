@@ -1,14 +1,3 @@
-/*
-  Name: Prince Pamintuan
-  Date: September 30, 2025
-  Commit: Initial CSS and JS of Home Page (index.html)
-
-  Commit:
-  1. Added basic styles for body and navbar.
-  2. Styled the search container to be centered with a white background and rounded corners.
-  3. Added styles for a sidebar navigation (sidenav) with open and close functionality.
-  */
-
 /* Font Styles */
 @font-face {
     font-family: 'D-DIN-Bold';
@@ -75,7 +64,6 @@
     box-sizing: border-box;
 }
 
-/* Placeholder */
 html, body {
     margin: 0;
     height: 100%;
@@ -102,6 +90,7 @@ body::before {
 }
 
 .navbar {
+    position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -117,10 +106,11 @@ body::before {
 }
 
 .sidenav {
+    position: absolute;
     height: 100%;
     width: 0;
     position: fixed;
-    z-index: 1;
+    z-index: 2;
     top: 0;
     left: 0;
     background-color: #ffffff;
@@ -183,7 +173,23 @@ body::before {
 
 #search-container p {
     font-size: 25px;
-    margin-top: 10px;
+    margin-top: -20px;
+}
+
+#decor-1 {
+    position: absolute;
+    transform: scale(0.8);
+    top: 50px;
+    left: 50px;
+    z-index: 1;
+}
+
+#decor-2 {
+    position: absolute;
+    transform: scale(0.9);
+    top: 500px;
+    left: 1000px;
+    z-index: 1;
 }
 
 #search-bar {
@@ -248,8 +254,25 @@ body::before {
 }
 
 #march7-bg{
-    position: fixed;
+    position: absolute;
     width: 734px;
     height: 649px;
     transform: translateY(30%);
+}
+
+#canvas {
+  width: 1440px;
+  height: 787px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+}
+
+html, body {
+  width: 1440px;
+  height: 787px;
+  margin: 0 auto;
+  overflow: hidden;
 }
