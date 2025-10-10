@@ -6,3 +6,13 @@
 
 
 *Refer to the Figma Design, will refine this soon
+
+Roadmap:
+1. Characters and Lightcones Selection
+2. Footer Design
+3. Locations Page
+4. Audio Sounds for Website
+5. Sidebar Menu Design
+6. Character Layout Design
+7. Lightcone Layout Page
+8. Importing All Text Sources for Wikipedia
