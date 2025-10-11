@@ -138,3 +138,42 @@ body::before {
     width: 40px;
 }
 
+
+/* ======================================
+  RESULT STYLES
+====================================== */
+.result-box {
+    width: 100%;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    z-index: 10;
+    display: none;
+    overflow-y: auto;
+    max-height: calc(3 * 60px);
+}
+
+.result-box.active {
+    display: block;
+}
+
+.result-box ul {
+    margin: 0;
+    padding: 10px 0;
+}
+
+.result-box ul li {
+    list-style: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    font-size: 18px;
+    color: #333;
+}
+
+.result-box ul li:hover {
+    background-color: #f0f0f0;
+}
