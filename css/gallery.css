@@ -9,8 +9,15 @@ html, body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
-    overflow: hidden;
+    -ms-overflow-style: none;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    overflow-y: scroll;
     font-family: 'D-DIN', sans-serif;
+}
+
+html::-webkit-scrollbar {
+  display: none;
 }
 
 body::before {
@@ -37,6 +44,7 @@ body::before {
   justify-content: space-between;
   padding: 0 70px;
   margin-top: 75px;
+  scroll-margin-top: 70px;
 }
 
 .heading {
@@ -84,8 +92,18 @@ body::before {
   GALLERY STYLES
 ====================================== */
 
+.gallery {
+  display: grid;
+  row-gap: 10px;
+  grid-template-columns: auto auto auto auto;
+}
 
-
+.card {
+  margin: 0 auto;
+  text-align: center;
+  max-width: 311px;
+  width: 100%;
+}
 
 
 
@@ -93,3 +111,25 @@ body::before {
   FOOTER STYLES
 ====================================== */
 
+footer {
+  margin-top: 100px;
+  background-color: #FFF;
+  padding: 3rem;
+}
+
+footer .footer-left {
+  margin-left: 100px;
+}
+
+.footer-left *:not(p) {
+  line-height: 2;
+}
+
+footer .footer-right {
+  text-align: right;
+}
+
+footer #back-top {
+  color: inherit;
+  font-size: 32px;
+}
