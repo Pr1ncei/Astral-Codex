@@ -9,10 +9,7 @@
 
 Roadmap:
 1. Characters and Lightcones Selection
-2. Footer Design
-
-
-3. Sidebar Menu Design
-4. Character Layout Design
-5. Lightcone Layout Page
-6. Importing All Text Sources for Wikipedia
+2. Character Layout Design                  - PRIORITY
+3. Lightcone Layout Page                    - PRIORITY
+4. Importing All Text Sources for Wikipedia
+5. Mobile and Tablet Viewport

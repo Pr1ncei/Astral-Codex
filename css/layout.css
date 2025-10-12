@@ -130,24 +130,53 @@
     padding-top: 60px;
 }
 
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  margin-top: -55px;
+}
+
+.sidenav h2 {
+    font-weight: 100;
+    font-size: 20px;
+}
+
+.sidebar-title {
+    font-weight: 300;
+    padding: 0 2rem;
+    font-size: 15px;
+}
+
+.sidebar-header .closebtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  transition: transform 0.2s ease;
+}
+
 .sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #000000;
-    display: block;
-    transition: 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0 2rem;
+  font-family: 'D-Din', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 100;
+  color: #000;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border-radius: 20px;
 }
 
 .sidenav a:hover {
-    color: #f1f1f1;
-}
+    background-color: #ffe08a;
+    font-weight: 700;
 
-.sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
 }
-
