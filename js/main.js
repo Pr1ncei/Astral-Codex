@@ -8,7 +8,7 @@ function closeNav(){
 }
 
 
-// FIXED CONTENT ZOOM 
+// FIXED CONTENT ZOOM
 function applyZoomLock() {
   const container = document.getElementById("canvas");
   if (!container) return;
@@ -23,6 +23,11 @@ window.addEventListener("load", applyZoomLock);
 
 
 // SEARCH BAR
+
+/* CURRENT ISSUE:
+  - Search Button does not work :(
+*/
+
 document.addEventListener("DOMContentLoaded", () => {
   const searchInput = document.querySelector('#search-bar input');
   const resultBox = document.querySelector('.result-box');
@@ -78,3 +83,59 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+
+// IMAGE SLIDER
+const sliderImg = document.querySelector('.location-img');
+const sliderName = document.querySelector('.location-name');
+
+const locations = [
+  {
+    name: "Astral Express",
+    img: "../assets/locations/astral-express.png"
+  },
+  {
+    name: "Herta Space Station",
+    img: "../assets/locations/herta-space-station.png"
+  },
+  {
+    name: "Jarilo-VI",
+    img: "../assets/locations/jarilo-vi.png"
+  },
+  {
+    name: "Xianzhou Luofu",
+    img: "../assets/locations/xianzhou-luofu.png"
+  },
+  {
+    name: "Penacony",
+    img: "../assets/locations/penacony.png"
+  },
+  {
+    name: "Amphoreus",
+    img: "../assets/locations/amphoreus.png"
+  }
+];
+
+let startPos = 0;
+
+function updateSlider() {
+  sliderImg.src = locations[startPos].img;
+  sliderName.textContent = locations[startPos].name;
+}
+
+
+function next() {
+  startPos++;
+  if (startPos >= locations.length) {
+    startPos = 0;
+  }
+  updateSlider();
+}
+
+function prev() {
+  startPos--;
+  if (startPos < 0){
+    startPos = locations.length - 1;
+  }
+  updateSlider();
+}

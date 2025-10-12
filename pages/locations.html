@@ -7,7 +7,7 @@
     <link rel="icon" type="image/x-icon" href="../assets/icons/favicon.webp" />
     <link rel="stylesheet" type="text/css" href="../css/locations.css"/>
     <link rel="stylesheet" type="text/css" href="../css/layout.css"/>
-    <script src="../js/main.js"></script>
+
   </head>
 
   <body>
@@ -32,10 +32,17 @@
           <span><img class="hsr-logo" src="../assets/icons/hsr_logo.png" /></span>
       </div>
 
-      <div class="location-name"><h1>ASTRAL EXPRESS</h1></div>
+      <!-- IMAGE SLIDER -->
+      <div class="slider">
+        <div class="location-box">
+          <h1 class="location-name">ASTRAL EXPRESS</h1>
+          <img class="location-img" src="../assets/locations/astral-express.png" alt="Astral Express Picture"/>
+        </div>
 
-
-
+        <button class="btn left" onclick="prev()"><img src="../assets/icons/icon-prev.svg" alt="Previous Button"></button>
+        <button class="btn right" onclick="next()"><img src="../assets/icons/icon-next.svg" alt="Next Button"></button>
+      </div>
     </div>
+    <script src="../js/main.js"></script>
   </body>
 </html>
