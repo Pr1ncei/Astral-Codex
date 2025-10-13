@@ -9,17 +9,36 @@
   </head>
 
   <body>
-    <div id="canvas">
+
       <!-- Navigation Bar Component -->
       <div class="navbar">
           <div id="sidebar" class="sidenav">
-              <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><img src="../../assets/icons/menu.svg"></a>
-              <a href="../../index.html">Home</a>
-              <a href="../characters.html">Characters</a>
-              <a href="../lightcones.html">Lightcones</a>
-              <a href="../locations.html">Locations</a>
-          </div>
+              <div class="sidebar-header">
+                <h2>ASTRAL CODEX</h2>
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><img src="../../assets/icons/menu.svg"></a>
+              </div>
 
+              <h3 class="sidebar-title">NAVIGATION</h3>
+
+              <nav class="sidebar-links">
+              <a href="../../index.html" class="active">
+                <img src="../../assets/icons/icon-home.svg" alt="Home Icon">
+                <span>Home</span>
+              </a>
+              <a href="../characters.html">
+                <img src="../../assets/icons/icon-character.svg" alt="Characters Icon">
+                <span>Characters</span>
+              </a>
+              <a href="../lightcones.html">
+                <img src="../../assets/icons/icon-lightcone.svg" alt="Lightcones Icon">
+                <span>Lightcones</span>
+              </a>
+              <a href="../locations.html">
+                <img src="../../assets/icons/icon-location.svg" alt="Locations Icon">
+                <span>Locations</span>
+              </a>
+            </nav>
+          </div>
 
           <span onclick="openNav()"><button id="menu-button"><img src="../../assets/icons/menu.svg"></button></span>
           <h1>ASTRAL CODEX</h1>
@@ -27,7 +46,104 @@
       </div>
 
 
+      <!-- MAIN CODE -->
+      <div class="character-profile">
+        <section class="character-header">
+          <div class="header-left">
+              <div class="character-header-top">
+                <h1 class="character-name">CASTORICE</h1>
+                <div class="character-stars">
+                  <img src="../../assets/icons/5-stars.svg" alt="5 Stars">
+                </div>
+              </div>
 
-    </div>
+            <div class="divider">
+              <img src="../../assets/decorations/purple-divider.png">
+            </div>
+
+            <p class="character-description">The land that reveres death, Aidonia, where snow falls endlessly, has today drifted into a sweet slumber. Castorice, daughter of the River of Souls, Chrysos Heir in search of "Death" Coreflame, sets forth. You must guard the lament of souls and embrace the solitude of destiny. <br><br>— Life and death are but a journey. When butterfly alights on the branch, what withers will bloom anew.</p>
+
+
+            <div class="character-buttons">
+              <a><img src="../../assets/icons/view-details.svg"></a>
+              <a><img src="../../assets/icons/guides-builds.svg"></a>
+
+
+            </div>
+          </div>
+
+          <div class="header-right">
+            <img src="../../assets/characters/splash/castorice-splash.png" alt="Castorice Splash Art"/>
+          </div>
+        </section>
+
+        <section class="character-info">
+          <div class="info-card"></div>
+          <div class="info-card"></div>
+          <div class="info-card"></div>
+        </section>
+
+        <section class="character-build">
+          <div class="build-card"></div>
+          <div class="build-card"></div>
+          <div class="build-card"></div>
+          <div class="stat-section">
+            <div class="stat-card"></div>
+            <div class="stat-card"></div>
+          </div>
+          <div class="team-section">
+            <div class="team-grid">
+              <div class="team-member"></div>
+              <div class="team-member"></div>
+              <div class="team-member"></div>
+              <div class="team-member"></div>
+            </div>
+
+            <div class="team-grid">
+              <div class="team-member"></div>
+              <div class="team-member"></div>
+              <div class="team-member"></div>
+              <div class="team-member"></div>
+            </div>
+
+
+          </div>
+        </section>
+
+      </div>
+
+
+
+      <!-- IGNORE -->
+      <footer>
+        <div class="footer-left">
+          <div class="footer-logos">
+            <img class="footer-img" src="../../assets/icons/hsr_logo.png" />
+            <img class="footer-img" src="../../assets/icons/mihoyo-logo.svg" />
+          </div>
+
+          <p>All Assets are taken from Honkai: Star Rail.<br>All Educational Purposes Only.<br>Made by <strong>Prince Pamintuan</strong>, 2025.</p>
+          <a href="#title" id="back-top" >Back to Top</a>
+        </div>
+
+        <div class="footer-right">
+          <div class="footer-section">
+            <p><strong>Site Map</strong></p>
+            <a href="../index.html"><p>Home Page</p></a>
+            <a href="characters.html"><p>Characters</p></a>
+            <a href="#title"><p><u>Lightcones</u></p></a>
+            <a href="locations.html"><p>Locations</p></a>
+          </div>
+
+          <div class="footer-section">
+            <p><strong>Legal</strong></p>
+            <p>Privacy Policy</p>
+            <p>Fair Use</p>
+            <p>Terms of Services</p>
+          </div>
+        </div>
+      </footer>
+
+
   </body>
 </html>
