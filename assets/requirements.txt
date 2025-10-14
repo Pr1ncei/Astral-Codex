@@ -1,14 +1,4 @@
-1. Background
-2. Icons
-3. Characters
-4. Frame
-5. Favicon
-
-
-*Refer to the Figma Design, will refine this soon
-
 Roadmap:
 1. Characters and Lightcones Selection      - MINOR PRIORITY
-2. Lightcone Layout Page                    - PRIORITY
-3. Importing All Text Sources for Wikipedia
-4. Mobile and Tablet Viewport
+2. Importing All Text Sources for Wikipedia
+3. Mobile and Tablet Viewport
