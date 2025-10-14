@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="../../css/wiki-c.css"/>
     <link rel="stylesheet" type="text/css" href="../../css/layout.css"/>
-    <script src="../../js/main.js"></script>
   </head>
 
   <body>
@@ -51,7 +50,7 @@
         <section class="character-header">
           <div class="header-left">
               <div class="character-header-top">
-                <h1 class="character-name">CASTORICE</h1>
+                <h1 class="character-name" id="title">CASTORICE</h1>
                 <div class="character-stars">
                   <img src="../../assets/icons/5-stars.svg" alt="5 Stars">
                 </div>
@@ -67,8 +66,6 @@
             <div class="character-buttons">
               <a><img src="../../assets/icons/view-details.svg"></a>
               <a><img src="../../assets/icons/guides-builds.svg"></a>
-
-
             </div>
           </div>
 
@@ -78,9 +75,119 @@
         </section>
 
         <section class="character-info">
-          <div class="info-card"></div>
-          <div class="info-card"></div>
-          <div class="info-card"></div>
+          <div class="left-panel">
+            <div class="info-card basic-info">
+              <h2>Basic Information</h2>
+              <div class="info-grid">
+                <div class="info-item">
+                  <img src="../../assets/icons/paths/path_rememberance.svg">
+                  <strong>Rememberance</strong>
+                  <p>Path Type</p>
+                </div>
+                <div class="info-item">
+                  <img src="../../assets/icons/combats/quantum-type.svg">
+                  <strong>Quantum</strong>
+                  <p>Combat Type</p>
+                </div>
+                <div class="info-item">
+                  <img id="stars" src="../../assets/icons/5-stars.svg">
+                  <strong id="text-stars">5-Stars</strong>
+                  <p>Rarity</p>
+                </div>
+                <div class="info-item">
+                  <img src="../../assets/icons/amphoreus-icon.svg">
+                  <strong>Amphoreus</strong>
+                  <p>Faction</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="info-card ascension-info">
+              <div class="ascension-header">
+                <h2>Ascension Stats</h2>
+                <div class="level-buttons" id="levelButtons"></div>
+              </div>
+
+              <div class="stats-display" id="statsDisplay"></div>
+            </div>
+
+
+            <div class="info-card eidolons">
+              <h2>Eidolons</h2>
+              <div class="eidolon-infos">
+
+                <h3>E1: Snowbound Maiden, Memory to Tomb</h3>
+                <p>When the enemy target's current HP is 80%/50% of Max HP or lower, the DMG dealt to it by "Boneclaw, Doomdrake's Embrace," "Claw Splits the Veil," "Breath Scorches the Shadow," and "Wings Sweep the Ruins" is 120%/140% of the original DMG respectively.</p>
+                <br>
+                <h3>E2: Crown on Wings of Bloom</h3>
+                <p>When the enemy target's current HP is 80%/50% of Max HP or lower, the DMG dealt to it by "Boneclaw, Doomdrake's Embrace," "Claw Splits the Veil," "Breath Scorches the Shadow," and "Wings Sweep the Ruins" is 120%/140% of the original DMG respectively.</p>
+                <br>
+                <h3>E3: Pious Pilgrim, Dance in Doom</h3>
+                <p>When the enemy target's current HP is 80%/50% of Max HP or lower, the DMG dealt to it by "Boneclaw, Doomdrake's Embrace," "Claw Splits the Veil," "Breath Scorches the Shadow," and "Wings Sweep the Ruins" is 120%/140% of the original DMG respectively.</p>
+                <br>
+                <h3>E4: Rest in Songs of Gloom</h3>
+                <p>When the enemy target's current HP is 80%/50% of Max HP or lower, the DMG dealt to it by "Boneclaw, Doomdrake's Embrace," "Claw Splits the Veil," "Breath Scorches the Shadow," and "Wings Sweep the Ruins" is 120%/140% of the original DMG respectively.</p>
+                <br>
+                <h3>E5: Pristine Pages, Prophecy as Plume</h3>
+                <p>When the enemy target's current HP is 80%/50% of Max HP or lower, the DMG dealt to it by "Boneclaw, Doomdrake's Embrace," "Claw Splits the Veil," "Breath Scorches the Shadow," and "Wings Sweep the Ruins" is 120%/140% of the original DMG respectively.</p>
+                <br>
+                <h3>E6: Await for Years to Loom</h3>
+                <p>When the enemy target's current HP is 80%/50% of Max HP or lower, the DMG dealt to it by "Boneclaw, Doomdrake's Embrace," "Claw Splits the Veil," "Breath Scorches the Shadow," and "Wings Sweep the Ruins" is 120%/140% of the original DMG respectively.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="info-card right-panel">
+            <div class="character-profile">
+              <div class="character-info-header">
+                <h1>Castorice</h1>
+                <p class="subtitle">Servant of Death</p>
+              </div>
+              <img src="../../assets/characters/full/castorice-full.png" alt="character-image">
+            </div>
+
+            <div class="details">
+              <h2>Titles</h2>
+              <ul>
+                <li>Death</li>
+                <li>Servant of Death</li>
+                <li>Goddess of Death</li>
+                <li>Maiden of War</li>
+                <li>Cas</li>
+                <li>Cassie</li>
+                <li>Princess Homebody</li>
+                <li>Okhema's Mortician</li>
+              </ul>
+
+              <h2>Release Date</h2>
+              <p>April 09, 2025</p>
+
+              <h2>World</h2>
+              <p>Amphoreus</p>
+
+              <h2>City State</h2>
+              <p>Styxia, Aidonia, Okhema</p>
+
+              <h2>Divine Authority</h2>
+              <p>Thanatos, "Hand of Shadow", Titan of Death</p>
+
+              <h2>How to Obtain</h2>
+              <p>Limited Character Event Warp</p>
+
+              <h2>English VA</h2>
+              <p>Melody Muze</p>
+
+              <h2>Chinese VA</h2>
+              <p>Ruan Congqing</p>
+
+              <h2>Korean VA</h2>
+              <p>Lee Serena</p>
+
+              <h2>Japanese VA</h2>
+              <p>Chiwa Saitô</p>
+            </div>
+
+          </div>
         </section>
 
         <section class="character-build">
@@ -105,14 +212,10 @@
               <div class="team-member"></div>
               <div class="team-member"></div>
             </div>
-
-
           </div>
         </section>
-
+        
       </div>
-
-
 
       <!-- IGNORE -->
       <footer>
@@ -144,6 +247,6 @@
         </div>
       </footer>
 
-
+  <script src="../../js/main.js"></script>
   </body>
 </html>

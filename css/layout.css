@@ -185,6 +185,9 @@
 /* ======================================
   FOOTER STYLES
 ====================================== */
+#title {
+  scroll-margin-top: 100px;
+}
 
 footer {
   display: flex;

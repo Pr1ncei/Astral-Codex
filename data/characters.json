@@ -1,0 +1,14 @@
+{
+  "castorice": {
+    "levels": [
+      { "level": 1, "hp": 143, "atk": 132, "def": 59, "spd": 95 },
+      { "level": 20, "hp": 253, "atk": 234, "def": 105, "spd": 95 },
+      { "level": 30, "hp": 367, "atk": 339, "def": 152, "spd": 95 },
+      { "level": 40, "hp": 481, "atk": 444, "def": 199, "spd": 95 },
+      { "level": 50, "hp": 595, "atk": 549, "def": 246, "spd": 95 },
+      { "level": 60, "hp": 709, "atk": 654, "def": 293, "spd": 95 },
+      { "level": 70, "hp": 823, "atk": 759, "def": 340, "spd": 95 },
+      { "level": 80, "hp": 937, "atk": 864, "def": 387, "spd": 95 }
+    ]
+  }
+}

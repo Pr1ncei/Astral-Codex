@@ -139,3 +139,172 @@ function prev() {
   }
   updateSlider();
 }
+
+// Character Ascension Stats
+let levels = [];
+let currentLevel = 0;
+let characterData = null;
+
+// Load character data from JSON
+async function loadCharacterData(characterName) {
+  try {
+    const response = await fetch('../../data/characters.json');
+    const allCharacters = await response.json();
+
+    characterData = allCharacters[characterName];
+
+    if (!characterData) {
+      console.error(`Character "${characterName}" not found in database`);
+      return false;
+    }
+
+    levels = characterData.levels;
+    return true;
+
+  } catch (error) {
+    console.error('Error loading character data:', error);
+    return false;
+  }
+}
+
+// Get character name from page
+function getCharacterName() {
+  const characterElement = document.querySelector('[data-character]');
+  if (characterElement) {
+    return characterElement.getAttribute('data-character');
+  }
+
+  const path = window.location.pathname;
+  const match = path.match(/\/([^\/]+)\.html$/);
+  if (match) {
+    return match[1].toLowerCase();
+  }
+
+  return null;
+}
+
+// Initialize ascension stats
+async function initAscension() {
+  const characterName = getCharacterName();
+
+  if (!characterName) {
+    console.error('Could not determine character name');
+    return;
+  }
+
+  const loaded = await loadCharacterData(characterName);
+
+  if (loaded) {
+    createLevelButtons();
+    updateStats();
+    updateMaterials();
+  }
+}
+
+// Create level selection buttons
+function createLevelButtons() {
+  const container = document.getElementById('levelButtons');
+  if (!container) return;
+
+  container.innerHTML = ''; // Clear existing buttons
+
+  levels.forEach((data, index) => {
+    const btn = document.createElement('button');
+    btn.className = 'level-btn';
+    btn.textContent = `Lv. ${data.level}`;
+    if (index === 0) btn.classList.add('active');
+    btn.onclick = () => selectLevel(index);
+    container.appendChild(btn);
+  });
+}
+
+// Select a level
+function selectLevel(index) {
+  currentLevel = index;
+  const buttons = document.querySelectorAll('.level-btn');
+  buttons.forEach((btn, i) => {
+    btn.classList.toggle('active', i === index);
+  });
+  updateStats();
+}
+
+// Update stats display
+function updateStats() {
+  const data = levels[currentLevel];
+  const baseData = levels[0];
+  const statsDisplay = document.getElementById('statsDisplay');
+
+  if (!statsDisplay) return;
+
+  statsDisplay.innerHTML = `
+    <div class="stat-row">
+      <div class="stat-info">
+        <span class="stat-icon"><img src="../../assets/icons/base-hp.svg" /></span>
+        <span class="stat-label">Base HP</span>
+      </div>
+      <div class="stat-values">
+        <span class="base-value">${baseData.hp}</span>
+        <span class="arrow">→</span>
+        <span class="final-value">${data.hp}</span>
+      </div>
+    </div>
+    <div class="stat-row">
+      <div class="stat-info">
+        <span class="stat-icon"><img src="../../assets/icons/base-atk.svg" /></span>
+        <span class="stat-label">Base ATK</span>
+      </div>
+      <div class="stat-values">
+        <span class="base-value">${baseData.atk}</span>
+        <span class="arrow">→</span>
+        <span class="final-value">${data.atk}</span>
+      </div>
+    </div>
+    <div class="stat-row">
+      <div class="stat-info">
+        <span class="stat-icon"><img src="../../assets/icons/base-def.svg" /></span>
+        <span class="stat-label">Base DEF</span>
+      </div>
+      <div class="stat-values">
+        <span class="base-value">${baseData.def}</span>
+        <span class="arrow">→</span>
+        <span class="final-value">${data.def}</span>
+      </div>
+    </div>
+    <div class="stat-row">
+      <div class="stat-info">
+        <span class="stat-icon"><img src="../../assets/icons/base-spd.svg" /></span>
+        <span class="stat-label">Base SPD</span>
+      </div>
+      <div class="stat-values">
+        <span class="base-value">${baseData.spd}</span>
+        <span class="arrow">→</span>
+        <span class="final-value">${data.spd}</span>
+      </div>
+    </div>
+  `;
+}
+
+// Update materials display
+function updateMaterials() {
+  const materialsGrid = document.querySelector('.materials-grid');
+  if (!materialsGrid || !characterData || !characterData.materials) return;
+
+  materialsGrid.innerHTML = characterData.materials.map(material => `
+    <div class="material-item">
+      <div class="material-icon">
+        ${material.icon.endsWith('.png') || material.icon.endsWith('.svg')
+          ? `<img src="../../assets/materials/${material.icon}" alt="${material.name}">`
+          : material.icon}
+      </div>
+      <div class="material-count">${material.count}</div>
+      <div class="material-name">${material.name}</div>
+    </div>
+  `).join('');
+}
+
+// Initialize when DOM is ready
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initAscension);
+} else {
+  initAscension();
+}
