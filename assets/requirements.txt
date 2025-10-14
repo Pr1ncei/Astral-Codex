@@ -9,7 +9,6 @@
 
 Roadmap:
 1. Characters and Lightcones Selection      - MINOR PRIORITY
-2. Character Layout Design                  - PRIORITY
-3. Lightcone Layout Page                    - PRIORITY
-4. Importing All Text Sources for Wikipedia
-5. Mobile and Tablet Viewport
+2. Lightcone Layout Page                    - PRIORITY
+3. Importing All Text Sources for Wikipedia
+4. Mobile and Tablet Viewport

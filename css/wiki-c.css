@@ -423,3 +423,266 @@ body::before {
   min-width: 2.5rem;
   text-align: right;
 }
+
+/* ======================================
+  CHARACTER BUILD SECTION STYLES
+====================================== */
+
+.character-build {
+  max-width: 1000px;
+  margin: 4rem auto;
+  padding: 0 2rem;
+}
+
+.build-header {
+  text-align: left;
+  margin-bottom: 3rem;
+}
+
+.build-header h1 {
+  font-family: 'D-DIN-Bold', sans-serif;
+  font-size: 3rem;
+  color: #FFF;
+  margin: 0;
+  margin-bottom: 0.8rem;
+  font-weight: 200;
+  letter-spacing: 2px;
+}
+
+.build-header .divider {
+  margin: 1rem auto;
+  max-width: 600px;
+}
+
+.build-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.stats-row {
+  grid-template-columns: 1fr 1fr;
+}
+
+/* Build Cards */
+.build-card {
+  min-height: 400px;
+}
+
+.build-card h2 {
+  color: #b48cff;
+  font-size: 1.3rem;
+  border-bottom: 1px solid rgba(180, 140, 255, 0.3);
+  padding-bottom: 0.8rem;
+  margin-bottom: 1.2rem;
+}
+
+/* Relic List */
+.relic-list,
+.lightcone-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.relic-item,
+.lightcone-item {
+  display: flex;
+  gap: 1rem;
+  padding: 0.8rem;
+  background: rgba(20, 30, 60, 0.4);
+  border: 1px solid rgba(180, 140, 255, 0.2);
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.relic-item:hover,
+.lightcone-item:hover {
+  background: rgba(30, 40, 70, 0.5);
+  border-color: rgba(180, 140, 255, 0.4);
+  transform: translateX(5px);
+}
+
+.relic-icon,
+.lightcone-icon {
+  flex-shrink: 0;
+  width: 50px;
+  height: 50px;
+  background: rgba(100, 80, 150, 0.3);
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.relic-icon img,
+.lightcone-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.relic-info h3,
+.lightcone-info h3 {
+  color: #d5b3ff;
+  font-size: 1rem;
+  margin: 0 0 0.5rem 0;
+  font-weight: 600;
+}
+
+.relic-info p,
+.lightcone-info p {
+  color: #a0b5d8;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.relic-info strong,
+.lightcone-info strong {
+  color: #fff;
+}
+
+/* Stats Cards */
+.stat-card h2 {
+  color: #b48cff;
+  font-size: 1.1rem;
+  border-bottom: 1px solid rgba(180, 140, 255, 0.3);
+  padding-bottom: 0.8rem;
+  margin-bottom: 1.2rem;
+}
+
+.stat-priority-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.stat-priority-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: rgba(20, 30, 60, 0.4);
+  border: 1px solid rgba(180, 140, 255, 0.2);
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.stat-priority-item:hover {
+  background: rgba(30, 40, 70, 0.5);
+  border-color: rgba(180, 140, 255, 0.4);
+  transform: translateY(-2px);
+}
+
+.stat-name {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  color: #d5b3ff;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.stat-name img {
+  width: 36px;
+  height: 36px;
+}
+
+.stat-importance {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.star {
+  color: #ffd700;
+  font-size: 1.2rem;
+}
+
+.star-filled {
+  color: #ffd700;
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+}
+
+.stat-label {
+  color: #a0b5d8;
+  font-size: 0.9rem;
+}
+
+/* Team Cards */
+.team-card {
+  margin-bottom: 1.5rem;
+}
+
+.team-card h2 {
+  color: #b48cff;
+  font-size: 1.3rem;
+  border-bottom: 1px solid rgba(180, 140, 255, 0.3);
+  padding-bottom: 0.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.team-member {
+  background: rgba(20, 30, 60, 0.4);
+  border: 1px solid rgba(180, 140, 255, 0.2);
+  border-radius: 0.8rem;
+  padding: 1rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.team-member:hover {
+  background: rgba(30, 40, 70, 0.6);
+  border-color: rgba(180, 140, 255, 0.5);
+  transform: translateY(-5px);
+  box-shadow: 0 5px 20px rgba(180, 140, 255, 0.3);
+}
+
+.team-member img {
+  width: 7rem;
+  height: auto;
+  margin-bottom: 0.8rem;
+}
+
+.member-name {
+  color: #d5b3ff;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+.member-role {
+  color: #8fadda;
+  font-size: 0.85rem;
+  font-style: italic;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .build-row {
+    grid-template-columns: 1fr;
+  }
+
+  .stats-row {
+    grid-template-columns: 1fr;
+  }
+
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .build-header h1 {
+    font-size: 2rem;
+  }
+}

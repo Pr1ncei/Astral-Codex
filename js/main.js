@@ -284,27 +284,149 @@ function updateStats() {
   `;
 }
 
-// Update materials display
-function updateMaterials() {
-  const materialsGrid = document.querySelector('.materials-grid');
-  if (!materialsGrid || !characterData || !characterData.materials) return;
-
-  materialsGrid.innerHTML = characterData.materials.map(material => `
-    <div class="material-item">
-      <div class="material-icon">
-        ${material.icon.endsWith('.png') || material.icon.endsWith('.svg')
-          ? `<img src="../../assets/materials/${material.icon}" alt="${material.name}">`
-          : material.icon}
-      </div>
-      <div class="material-count">${material.count}</div>
-      <div class="material-name">${material.name}</div>
-    </div>
-  `).join('');
-}
-
 // Initialize when DOM is ready
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', initAscension);
 } else {
   initAscension();
+}
+
+// Light Cone (LC)dAscension Stats
+let lcLevels = [];
+let currentLcLevel = 0;
+let lightConeData = null;
+
+// Load light cone data from JSON
+async function loadLightConeData(lightConeName) {
+  try {
+    const response = await fetch('../../data/lightcones.json');
+    const allLightCones = await response.json();
+
+    lightConeData = allLightCones[lightConeName];
+
+    if (!lightConeData) {
+      console.error(`Light Cone "${lightConeName}" not found in database`);
+      return false;
+    }
+
+    lcLevels = lightConeData.levels;
+    return true;
+
+  } catch (error) {
+    console.error('Error loading light cone data:', error);
+    return false;
+  }
+}
+
+// Get light cone name from page
+function getLightConeName() {
+  const element = document.querySelector('[data-lightcone]');
+  if (element) {
+    return element.getAttribute('data-lightcone');
+  }
+
+  const path = window.location.pathname;
+  const match = path.match(/\/([^\/]+)\.html$/);
+  if (match) {
+    return match[1].toLowerCase();
+  }
+
+  return null;
+}
+
+// Initialize ascension stats
+async function initLightConeAscension() {
+  const lightConeName = getLightConeName();
+
+  if (!lightConeName) {
+    console.error('Could not determine light cone name');
+    return;
+  }
+
+  const loaded = await loadLightConeData(lightConeName);
+
+  if (loaded) {
+    createLightConeLevelButtons();
+    updateLightConeStats();
+    updateLightConeMaterials();
+  }
+}
+
+// Create level selection buttons
+function createLightConeLevelButtons() {
+  const container = document.getElementById('levelButtons');
+  if (!container) return;
+
+  container.innerHTML = ''; // Clear existing buttons
+
+  lcLevels.forEach((data, index) => {
+    const btn = document.createElement('button');
+    btn.className = 'level-btn';
+    btn.textContent = `Lv. ${data.level}`;
+    if (index === 0) btn.classList.add('active');
+    btn.onclick = () => selectLightConeLevel(index);
+    container.appendChild(btn);
+  });
+}
+
+// Select a level
+function selectLightConeLevel(index) {
+  currentLevel = index;
+  const buttons = document.querySelectorAll('.level-btn');
+  buttons.forEach((btn, i) => {
+    btn.classList.toggle('active', i === index);
+  });
+  updateLightConeStats();
+}
+
+// Update stats display
+function updateLightConeStats() {
+  const data = lcLevels[currentLevel];
+  const baseData = lcLevels[0];
+  const statsDisplay = document.getElementById('statsDisplay');
+
+  if (!statsDisplay) return;
+
+  statsDisplay.innerHTML = `
+    <div class="stat-row">
+      <div class="stat-info">
+        <span class="stat-icon"><img src="../../assets/icons/base-hp.svg" /></span>
+        <span class="stat-label">Base HP</span>
+      </div>
+      <div class="stat-values">
+        <span class="base-value">${baseData.hp}</span>
+        <span class="arrow">→</span>
+        <span class="final-value">${data.hp}</span>
+      </div>
+    </div>
+    <div class="stat-row">
+      <div class="stat-info">
+        <span class="stat-icon"><img src="../../assets/icons/base-atk.svg" /></span>
+        <span class="stat-label">Base ATK</span>
+      </div>
+      <div class="stat-values">
+        <span class="base-value">${baseData.atk}</span>
+        <span class="arrow">→</span>
+        <span class="final-value">${data.atk}</span>
+      </div>
+    </div>
+    <div class="stat-row">
+      <div class="stat-info">
+        <span class="stat-icon"><img src="../../assets/icons/base-def.svg" /></span>
+        <span class="stat-label">Base DEF</span>
+      </div>
+      <div class="stat-values">
+        <span class="base-value">${baseData.def}</span>
+        <span class="arrow">→</span>
+        <span class="final-value">${data.def}</span>
+      </div>
+    </div>
+  `;
+}
+
+// Initialize when DOM is ready
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initLightConeAscension);
+} else {
+  initLightConeAscension();
 }

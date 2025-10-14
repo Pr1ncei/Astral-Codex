@@ -185,7 +185,7 @@
 /* ======================================
   FOOTER STYLES
 ====================================== */
-#title {
+#title, #view-details, #guides-builds {
   scroll-margin-top: 100px;
 }
 
