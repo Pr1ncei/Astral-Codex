@@ -1,4 +1,2 @@
 Roadmap:
-1. Characters and Lightcones Selection      - MINOR PRIORITY
-2. Importing All Text Sources for Wikipedia
-3. Mobile and Tablet Viewport
+1. Importing All Text Sources for Wikipedia
