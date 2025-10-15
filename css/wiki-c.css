@@ -668,8 +668,240 @@ body::before {
   font-style: italic;
 }
 
-/* Responsive Design */
+/* ======================================
+  RESPONSIVE DESIGN - MOBILE & TABLET
+====================================== */
+
+/* Tablet - Medium screens (768px - 1024px) */
+@media (max-width: 1024px) {
+  .character-header {
+    width: 90%;
+  }
+
+  .character-name {
+    font-size: 120px;
+  }
+
+  .character-info {
+    grid-template-columns: 1.5fr 1fr;
+    width: 90%;
+  }
+
+  .info-card.basic-info,
+  .info-card.ascension-info,
+  .info-card.details {
+    width: 100%;
+  }
+
+  .info-card.right-panel {
+    width: 100%;
+  }
+}
+
+/* Mobile - Small screens (max-width: 768px) */
 @media (max-width: 768px) {
+
+  /* === CHARACTER HEADER === */
+  .character-profile {
+    margin-top: 80px;
+  }
+
+  .character-header {
+    flex-direction: column;
+    width: 90%;
+    align-items: center;
+  }
+
+  .header-left {
+    padding-right: 0;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .header-right, .character-stars {
+    display: none;
+  }
+
+
+  .character-header-top {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .character-name {
+    font-size: 130px;
+    text-align: center;
+  }
+
+  .divider {
+    margin-top: -30px;
+    text-align: center;
+  }
+
+  .divider img {
+    max-width: 100%;
+  }
+
+  .character-description {
+    text-align: center;
+    font-size: 14px;
+    max-width: 100%;
+  }
+
+  .character-buttons {
+    justify-content: center;
+  }
+
+  .character-buttons img {
+    width: 140px;
+  }
+
+  /* === CHARACTER INFO PANELS === */
+  .character-info {
+    grid-template-columns: 1fr;
+    width: 90%;
+    gap: 1rem;
+  }
+
+  .left-panel {
+    order: 1;
+  }
+
+  .info-card.right-panel {
+    order: 0; /* Show character portrait first on mobile */
+  }
+
+  .info-card.basic-info,
+  .info-card.ascension-info,
+  .info-card.eidolons,
+  .info-card.details {
+    width: 100%;
+  }
+
+  .info-card.right-panel {
+    width: 100%;
+  }
+
+  .info-card.basic-info {
+    height: auto;
+  }
+
+  /* === BASIC INFO GRID === */
+  .info-grid {
+    grid-template-columns: repeat(2, 1fr);
+    display: grid;
+    gap: 1rem;
+  }
+
+  .info-item img {
+    width: 60px;
+  }
+
+  .info-item img#stars {
+    width: 100px;
+  }
+
+  .info-item strong {
+    font-size: 0.95rem;
+  }
+
+  .info-item p {
+    font-size: 0.8rem;
+  }
+
+  /* === ASCENSION STATS === */
+  .ascension-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .level-buttons {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .level-btn {
+    font-size: 0.7rem;
+    padding: 0.35rem 0.6rem;
+  }
+
+  .stats-display {
+    grid-template-columns: 1fr;
+  }
+
+  .stat-row {
+    padding: 0.6rem;
+  }
+
+  .stat-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .stat-icon img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .stat-label {
+    font-size: 0.8rem;
+  }
+
+  .base-value,
+  .final-value {
+    font-size: 0.85rem;
+  }
+
+  /* === EIDOLONS === */
+  .eidolon-infos h3 {
+    font-size: 0.95rem;
+  }
+
+  .eidolon-infos p {
+    font-size: 0.75rem;
+  }
+
+  /* === RIGHT PANEL === */
+  .character-info-header {
+    margin-top: -5rem;
+  }
+
+  .character-info-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .subtitle {
+    font-size: 0.9rem;
+  }
+
+  .details h2 {
+    font-size: 1rem;
+  }
+
+  .details li,
+  .details p {
+    font-size: 0.85rem;
+  }
+
+  /* === CHARACTER BUILD SECTION === */
+  .character-build {
+    padding: 0 1rem;
+    margin: 2rem auto;
+  }
+
+  .build-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .build-header h1 {
+    font-size: 2rem;
+  }
+
   .build-row {
     grid-template-columns: 1fr;
   }
@@ -678,11 +910,238 @@ body::before {
     grid-template-columns: 1fr;
   }
 
+  .build-card {
+    min-height: auto;
+  }
+
+  /* === RELICS & LIGHTCONES === */
+  .relic-item,
+  .lightcone-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .relic-icon,
+  .lightcone-icon {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 0.5rem;
+  }
+
+  .relic-info h3,
+  .lightcone-info h3 {
+    font-size: 0.95rem;
+  }
+
+  .relic-info p,
+  .lightcone-info p {
+    font-size: 0.8rem;
+  }
+
+  /* === STATS === */
+  .stat-priority-item {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.75rem;
+    text-align: center;
+  }
+
+  .stat-name {
+    justify-content: center;
+  }
+
+  .stat-name img {
+    width: 28px;
+    height: 28px;
+  }
+
+  /* === TEAMS === */
   .team-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+
+  .team-member {
+    padding: 0.75rem;
+  }
+
+  .team-member img {
+    width: 5rem;
+  }
+
+  .member-name {
+    font-size: 0.9rem;
+  }
+
+  .member-role {
+    font-size: 0.75rem;
+  }
+}
+
+/* Extra Small Mobile (max-width: 480px) */
+@media (max-width: 480px) {
+
+  /* === CHARACTER HEADER === */
+  .character-name {
+    font-size: 130px;
+  }
+
+  .header-right img {
+    max-width: 280px;
+  }
+
+  .character-stars {
+    width: 100px;
+  }
+
+  .character-description {
+    font-size: 13px;
+    line-height: 1.4;
+  }
+
+  .character-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .character-buttons img {
+    width: 180px;
+  }
+
+  /* === INFO CARDS === */
+  .info-card {
+    padding: 1rem;
+  }
+
+  .info-card h2 {
+    font-size: 1rem;
+  }
+
+  /* === BASIC INFO === */
+  .info-grid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .info-item {
+    flex-direction: row;
+    justify-content: flex-start;
+    text-align: left;
+    gap: 1rem;
+  }
+
+  .info-item img {
+    width: 50px;
+  }
+
+  .info-item img#stars {
+    width: 80px;
+    transform: none;
+  }
+
+  .info-item #text-stars {
+    margin-top: 0;
+  }
+
+  /* === ASCENSION === */
+  .level-btn {
+    font-size: 0.65rem;
+    padding: 0.3rem 0.5rem;
+  }
+
+  .stat-icon img {
+    width: 20px;
+    height: 20px;
+  }
+
+  /* === CHARACTER BUILD === */
+  .build-header h1 {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+  }
+
+  .build-card h2 {
+    font-size: 1.1rem;
+  }
+
+  /* === RELICS & LIGHTCONES === */
+  .relic-icon,
+  .lightcone-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .relic-info h3,
+  .lightcone-info h3 {
+    font-size: 0.9rem;
+  }
+
+  .relic-info p,
+  .lightcone-info p {
+    font-size: 0.75rem;
+  }
+
+  /* === TEAMS === */
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .team-member img {
+    width: 6rem;
+  }
+}
+
+/* Landscape Mobile (max-height: 500px and orientation: landscape) */
+@media (max-height: 500px) and (orientation: landscape) {
+  .character-profile {
+    margin-top: 60px;
+  }
+
+  .character-name {
+    font-size: 50px;
+  }
+
+  .header-right img {
+    max-width: 200px;
+  }
+
+  .character-description {
+    font-size: 12px;
+  }
+}
+
+/* iPad and tablets in portrait (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .character-name {
+    font-size: 100px;
+  }
+
+  .character-info {
+    width: 85%;
   }
 
   .build-header h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
+  }
+
+  .team-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Large tablets and small laptops */
+@media (min-width: 1024px) and (max-width: 1280px) {
+  .character-header {
+    width: 85%;
+  }
+
+  .character-info {
+    width: 85%;
+  }
+
+  .character-build {
+    max-width: 900px;
   }
 }

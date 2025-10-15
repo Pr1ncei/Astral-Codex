@@ -275,3 +275,30 @@ a {
 a:visited {
   color: inherit;
 }
+
+@media (max-width: 900px) {
+  .footer-right {
+    flex-direction: column;
+    gap: 40px;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 600px) {
+  footer {
+    flex-direction: column;
+    padding: 2rem;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-right {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-logos {
+    justify-content: center;
+  }
+}

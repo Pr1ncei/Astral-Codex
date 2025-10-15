@@ -8,20 +8,6 @@ function closeNav(){
 }
 
 
-// FIXED CONTENT ZOOM
-function applyZoomLock() {
-  const container = document.getElementById("canvas");
-  if (!container) return;
-
-  const zoom = window.devicePixelRatio || 1;
-
-  container.style.transform = `translate(-50%, -50%) scale(${1 / zoom})`;
-}
-
-window.addEventListener("resize", applyZoomLock);
-window.addEventListener("load", applyZoomLock);
-
-
 // SEARCH BAR
 
 /* CURRENT ISSUE:

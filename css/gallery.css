@@ -106,3 +106,173 @@ body::before {
 }
 
 
+/* ======================================
+  RESPONSIVE DESIGN
+====================================== */
+
+/* ===== Large Tablets (≤1200px) ===== */
+@media screen and (max-width: 1280px) {
+  .card img {
+    max-width: 250px;
+  }
+}
+
+
+@media (max-width: 1200px) {
+  .title h1 {
+    font-size: 140px;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+  }
+
+  .card img {
+    max-width: 280px;
+  }
+
+  .title {
+    padding: 0 40px;
+  }
+
+  footer {
+    padding: 2.5rem 4rem;
+    gap: 40px;
+  }
+}
+
+/* ===== Tablets (≤900px) ===== */
+@media (max-width: 900px) {
+  .navbar h1 {
+    font-size: 20px;
+  }
+
+  .hsr-logo {
+    max-width: 90px;
+    right: 15px;
+  }
+
+  .title {
+    flex-direction: column;
+    text-align: center;
+    height: auto;
+    margin-top: 100px;
+  }
+
+  .title h1 {
+    font-size: 100px;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+}
+
+/* ===== Mobile Devices (≤600px) ===== */
+@media (max-width: 600px) {
+  body {
+    font-size: 14px;
+  }
+
+  .navbar {
+    height: 50px;
+    line-height: 50px;
+  }
+
+  .navbar h1 {
+    font-size: 18px;
+  }
+
+  .hsr-logo {
+    max-width: 70px;
+  }
+
+  #menu-button img {
+    width: 20px;
+    height: 20px;
+  }
+
+  /* ===== Title Section ===== */
+  .title {
+    margin-top: 80px;
+    padding: 0 20px;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .heading {
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+
+  .title h1 {
+    font-size: 120px;
+    text-align: center;
+  }
+
+  #divider img {
+
+
+    max-width: 355px;
+  }
+
+  /* ===== Gallery Section ===== */
+  .gallery {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 20px;
+    justify-items: center;
+  }
+
+  .card {
+    text-align: center;
+  }
+
+  .card img {
+    width: 90%;
+    height: auto;
+  }
+
+}
+
+/* ===== Very Small Devices (≤400px) ===== */
+@media (max-width: 400px) {
+  .title {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 60px;
+    padding: 0 10px;
+  }
+
+  .heading {
+    margin-top: 30px;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+
+  .title h1 {
+    font-size: 100px;
+    text-align: center;
+  }
+
+  #divider {
+    margin-top: -5px;
+  }
+
+  #divider img {
+    max-width: 355px;
+  }
+
+
+}
+
