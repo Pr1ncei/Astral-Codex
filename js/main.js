@@ -416,3 +416,4 @@ if (document.readyState === 'loading') {
 } else {
   initLightConeAscension();
 }
+

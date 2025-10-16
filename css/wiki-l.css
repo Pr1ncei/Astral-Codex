@@ -1,3 +1,8 @@
+:root {
+  --accent-color: #b48cff;
+  --accent-color-light: rgba(180, 140, 255, 0.3);
+}
+
 /* ======================================
   WEBPAGE STRUCTURE STYLES
 ====================================== */
@@ -179,9 +184,9 @@ body::before {
 .description h2,
 .ascension-info h2,
 .details h2 {
-  color: #b48cff;
+  color: var(--accent-color);
   font-size: 1.1rem;
-  border-bottom: 1px solid rgba(180, 140, 255, 0.3);
+  border-bottom: 1px solid var(--accent-color-light);
   padding-bottom: 0.5rem;
   margin-bottom: 0.8rem;
 }

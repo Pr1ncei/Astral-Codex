@@ -9,9 +9,27 @@
       { "level": 60, "hp": 709, "atk": 654, "def": 293, "spd": 95 },
       { "level": 70, "hp": 823, "atk": 759, "def": 340, "spd": 95 },
       { "level": 80, "hp": 937, "atk": 864, "def": 387, "spd": 95 }
-    ]
+    ],
+    "theme": {
+      "accentColor": "#b48cff",
+      "accentColorLight": "rgba(180, 140, 255, 0.3)",
+      "accentColorDark": "#7a5fc8",
+      "accentGradientStart": "#7a5fc8",
+      "accentGradientEnd": "#5d4aa8",
+      "textPrimary": "#d5b3ff",
+      "textSecondary": "#a0b5d8",
+      "textMuted": "#8fadda",
+      "bgItem": "rgba(20, 30, 60, 0.4)",
+      "bgItemHover": "rgba(30, 40, 70, 0.5)",
+      "borderAccent": "rgba(180, 140, 255, 0.2)",
+      "borderAccentHover": "rgba(180, 140, 255, 0.4)",
+      "shadowGlow": "rgba(160, 90, 255, 0.3)",
+      "shadowGlowHover": "rgba(180, 140, 255, 0.3)",
+      "buttonShadow": "rgba(122, 95, 200, 0.5)",
+      "dividerColor": "#8f7adb"
+    }
   },
-    "anaxa": {
+  "anaxa": {
     "levels": [
       { "level": 1, "hp": 143, "atk": 132, "def": 59, "spd": 95 },
       { "level": 20, "hp": 253, "atk": 234, "def": 105, "spd": 95 },
@@ -21,11 +39,204 @@
       { "level": 60, "hp": 709, "atk": 654, "def": 293, "spd": 95 },
       { "level": 70, "hp": 823, "atk": 759, "def": 340, "spd": 95 },
       { "level": 80, "hp": 937, "atk": 864, "def": 387, "spd": 95 }
-    ]
-  },
-    "aglaea": {
-      "levels": [
-        
-      ]
+    ],
+    "theme": {
+      "accentColor": "#1abc9c",
+      "accentColorLight": "rgba(26, 188, 156, 0.3)",
+      "accentColorDark": "#16a085",
+      "accentGradientStart": "#1abc9c",
+      "accentGradientEnd": "#148f77",
+      "textPrimary": "#a3e4d7",
+      "textSecondary": "#85c1e2",
+      "textMuted": "#73c6b6",
+      "bgItem": "rgba(20, 50, 45, 0.4)",
+      "bgItemHover": "rgba(25, 60, 55, 0.5)",
+      "borderAccent": "rgba(26, 188, 156, 0.2)",
+      "borderAccentHover": "rgba(26, 188, 156, 0.4)",
+      "shadowGlow": "rgba(26, 188, 156, 0.3)",
+      "shadowGlowHover": "rgba(26, 188, 156, 0.4)",
+      "buttonShadow": "rgba(22, 160, 133, 0.5)",
+      "dividerColor": "#45b39d"
     }
+  },
+  "aglaea": {
+    "levels": [
+      { "level": 1, "hp": 143, "atk": 132, "def": 59, "spd": 95 },
+      { "level": 20, "hp": 253, "atk": 234, "def": 105, "spd": 95 },
+      { "level": 30, "hp": 367, "atk": 339, "def": 152, "spd": 95 },
+      { "level": 40, "hp": 481, "atk": 444, "def": 199, "spd": 95 },
+      { "level": 50, "hp": 595, "atk": 549, "def": 246, "spd": 95 },
+      { "level": 60, "hp": 709, "atk": 654, "def": 293, "spd": 95 },
+      { "level": 70, "hp": 823, "atk": 759, "def": 340, "spd": 95 },
+      { "level": 80, "hp": 937, "atk": 864, "def": 387, "spd": 95 }
+    ],
+    "theme": {
+      "accentColor": "#f39c12",
+      "accentColorLight": "rgba(243, 156, 18, 0.3)",
+      "accentColorDark": "#d68910",
+      "accentGradientStart": "#f39c12",
+      "accentGradientEnd": "#ca6f1e",
+      "textPrimary": "#fdeaa8",
+      "textSecondary": "#f0b27a",
+      "textMuted": "#e59866",
+      "bgItem": "rgba(60, 40, 20, 0.4)",
+      "bgItemHover": "rgba(70, 50, 25, 0.5)",
+      "borderAccent": "rgba(243, 156, 18, 0.2)",
+      "borderAccentHover": "rgba(243, 156, 18, 0.4)",
+      "shadowGlow": "rgba(243, 156, 18, 0.3)",
+      "shadowGlowHover": "rgba(243, 156, 18, 0.4)",
+      "buttonShadow": "rgba(214, 137, 16, 0.5)",
+      "dividerColor": "#f8c471"
+    }
+  },
+  "mydei": {
+    "levels": [
+      { "level": 1, "hp": 143, "atk": 132, "def": 59, "spd": 95 },
+      { "level": 20, "hp": 253, "atk": 234, "def": 105, "spd": 95 },
+      { "level": 30, "hp": 367, "atk": 339, "def": 152, "spd": 95 },
+      { "level": 40, "hp": 481, "atk": 444, "def": 199, "spd": 95 },
+      { "level": 50, "hp": 595, "atk": 549, "def": 246, "spd": 95 },
+      { "level": 60, "hp": 709, "atk": 654, "def": 293, "spd": 95 },
+      { "level": 70, "hp": 823, "atk": 759, "def": 340, "spd": 95 },
+      { "level": 80, "hp": 937, "atk": 864, "def": 387, "spd": 95 }
+    ],
+    "theme": {
+      "accentColor": "#e74c3c",
+      "accentColorLight": "rgba(231, 76, 60, 0.3)",
+      "accentColorDark": "#c0392b",
+      "accentGradientStart": "#e74c3c",
+      "accentGradientEnd": "#a93226",
+      "textPrimary": "#f5b7b1",
+      "textSecondary": "#ec7063",
+      "textMuted": "#e57373",
+      "bgItem": "rgba(60, 20, 20, 0.4)",
+      "bgItemHover": "rgba(70, 25, 25, 0.5)",
+      "borderAccent": "rgba(231, 76, 60, 0.2)",
+      "borderAccentHover": "rgba(231, 76, 60, 0.4)",
+      "shadowGlow": "rgba(231, 76, 60, 0.3)",
+      "shadowGlowHover": "rgba(231, 76, 60, 0.4)",
+      "buttonShadow": "rgba(192, 57, 43, 0.5)",
+      "dividerColor": "#ec7063"
+    }
+  },
+  "phainon": {
+    "levels": [
+      { "level": 1, "hp": 143, "atk": 132, "def": 59, "spd": 95 },
+      { "level": 20, "hp": 253, "atk": 234, "def": 105, "spd": 95 },
+      { "level": 30, "hp": 367, "atk": 339, "def": 152, "spd": 95 },
+      { "level": 40, "hp": 481, "atk": 444, "def": 199, "spd": 95 },
+      { "level": 50, "hp": 595, "atk": 549, "def": 246, "spd": 95 },
+      { "level": 60, "hp": 709, "atk": 654, "def": 293, "spd": 95 },
+      { "level": 70, "hp": 823, "atk": 759, "def": 340, "spd": 95 },
+      { "level": 80, "hp": 937, "atk": 864, "def": 387, "spd": 95 }
+    ],
+    "theme": {
+      "accentColor": "#3498db",
+      "accentColorLight": "rgba(52, 152, 219, 0.3)",
+      "accentColorDark": "#2980b9",
+      "accentGradientStart": "#3498db",
+      "accentGradientEnd": "#21618c",
+      "textPrimary": "#aed6f1",
+      "textSecondary": "#85c1e2",
+      "textMuted": "#7fb3d5",
+      "bgItem": "rgba(20, 35, 60, 0.4)",
+      "bgItemHover": "rgba(25, 45, 70, 0.5)",
+      "borderAccent": "rgba(52, 152, 219, 0.2)",
+      "borderAccentHover": "rgba(52, 152, 219, 0.4)",
+      "shadowGlow": "rgba(52, 152, 219, 0.3)",
+      "shadowGlowHover": "rgba(52, 152, 219, 0.4)",
+      "buttonShadow": "rgba(41, 128, 185, 0.5)",
+      "dividerColor": "#5dade2"
+    }
+  },
+  "tribbie": {
+    "levels": [
+      { "level": 1, "hp": 143, "atk": 132, "def": 59, "spd": 95 },
+      { "level": 20, "hp": 253, "atk": 234, "def": 105, "spd": 95 },
+      { "level": 30, "hp": 367, "atk": 339, "def": 152, "spd": 95 },
+      { "level": 40, "hp": 481, "atk": 444, "def": 199, "spd": 95 },
+      { "level": 50, "hp": 595, "atk": 549, "def": 246, "spd": 95 },
+      { "level": 60, "hp": 709, "atk": 654, "def": 293, "spd": 95 },
+      { "level": 70, "hp": 823, "atk": 759, "def": 340, "spd": 95 },
+      { "level": 80, "hp": 937, "atk": 864, "def": 387, "spd": 95 }
+    ],
+    "theme": {
+      "accentColor": "#e91e63",
+      "accentColorLight": "rgba(233, 30, 99, 0.3)",
+      "accentColorDark": "#c2185b",
+      "accentGradientStart": "#e91e63",
+      "accentGradientEnd": "#ad1457",
+      "textPrimary": "#f8bbd0",
+      "textSecondary": "#f48fb1",
+      "textMuted": "#f06292",
+      "bgItem": "rgba(60, 20, 40, 0.4)",
+      "bgItemHover": "rgba(70, 25, 50, 0.5)",
+      "borderAccent": "rgba(233, 30, 99, 0.2)",
+      "borderAccentHover": "rgba(233, 30, 99, 0.4)",
+      "shadowGlow": "rgba(233, 30, 99, 0.3)",
+      "shadowGlowHover": "rgba(233, 30, 99, 0.4)",
+      "buttonShadow": "rgba(194, 24, 91, 0.5)",
+      "dividerColor": "#ec407a"
+    }
+  },
+  "hyacine": {
+    "levels": [
+      { "level": 1, "hp": 143, "atk": 132, "def": 59, "spd": 95 },
+      { "level": 20, "hp": 253, "atk": 234, "def": 105, "spd": 95 },
+      { "level": 30, "hp": 367, "atk": 339, "def": 152, "spd": 95 },
+      { "level": 40, "hp": 481, "atk": 444, "def": 199, "spd": 95 },
+      { "level": 50, "hp": 595, "atk": 549, "def": 246, "spd": 95 },
+      { "level": 60, "hp": 709, "atk": 654, "def": 293, "spd": 95 },
+      { "level": 70, "hp": 823, "atk": 759, "def": 340, "spd": 95 },
+      { "level": 80, "hp": 937, "atk": 864, "def": 387, "spd": 95 }
+    ],
+    "theme": {
+      "accentColor": "#95a5a6",
+      "accentColorLight": "rgba(149, 165, 166, 0.3)",
+      "accentColorDark": "#7f8c8d",
+      "accentGradientStart": "#bdc3c7",
+      "accentGradientEnd": "#7f8c8d",
+      "textPrimary": "#ecf0f1",
+      "textSecondary": "#bdc3c7",
+      "textMuted": "#95a5a6",
+      "bgItem": "rgba(40, 45, 50, 0.4)",
+      "bgItemHover": "rgba(50, 55, 60, 0.5)",
+      "borderAccent": "rgba(149, 165, 166, 0.2)",
+      "borderAccentHover": "rgba(149, 165, 166, 0.4)",
+      "shadowGlow": "rgba(149, 165, 166, 0.3)",
+      "shadowGlowHover": "rgba(149, 165, 166, 0.4)",
+      "buttonShadow": "rgba(127, 140, 141, 0.5)",
+      "dividerColor": "#aab7b8"
+    }
+  },
+  "cipher": {
+    "levels": [
+      { "level": 1, "hp": 143, "atk": 132, "def": 59, "spd": 95 },
+      { "level": 20, "hp": 253, "atk": 234, "def": 105, "spd": 95 },
+      { "level": 30, "hp": 367, "atk": 339, "def": 152, "spd": 95 },
+      { "level": 40, "hp": 481, "atk": 444, "def": 199, "spd": 95 },
+      { "level": 50, "hp": 595, "atk": 549, "def": 246, "spd": 95 },
+      { "level": 60, "hp": 709, "atk": 654, "def": 293, "spd": 95 },
+      { "level": 70, "hp": 823, "atk": 759, "def": 340, "spd": 95 },
+      { "level": 80, "hp": 937, "atk": 864, "def": 387, "spd": 95 }
+    ],
+    "theme": {
+      "accentColor": "#8e44ad",
+      "accentColorLight": "rgba(142, 68, 173, 0.3)",
+      "accentColorDark": "#6c3483",
+      "accentGradientStart": "#8e44ad",
+      "accentGradientEnd": "#5b2c6f",
+      "textPrimary": "#d7bde2",
+      "textSecondary": "#bb8fce",
+      "textMuted": "#a569bd",
+      "bgItem": "rgba(35, 20, 50, 0.4)",
+      "bgItemHover": "rgba(45, 25, 60, 0.5)",
+      "borderAccent": "rgba(142, 68, 173, 0.2)",
+      "borderAccentHover": "rgba(142, 68, 173, 0.4)",
+      "shadowGlow": "rgba(142, 68, 173, 0.3)",
+      "shadowGlowHover": "rgba(142, 68, 173, 0.4)",
+      "buttonShadow": "rgba(108, 52, 131, 0.5)",
+      "dividerColor": "#a569bd"
+    }
+  }
 }

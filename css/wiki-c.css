@@ -1,3 +1,8 @@
+:root {
+  --accent-color: #b48cff;
+  --accent-color-light: rgba(180, 140, 255, 0.3);
+}
+
 /* ======================================
   WEBPAGE STRUCTURE STYLES
 ====================================== */
@@ -185,9 +190,9 @@ body::before {
 .ascension-info h2,
 .eidolons h2,
 .details h2 {
-  color: #b48cff;
+  color: var(--accent-color);
   font-size: 1.1rem;
-  border-bottom: 1px solid rgba(180, 140, 255, 0.3);
+  border-bottom: 1px solid var(--accent-color-light);
   padding-bottom: 0.5rem;
   margin-bottom: 0.8rem;
 }
@@ -471,9 +476,9 @@ body::before {
 }
 
 .build-card h2 {
-  color: #b48cff;
+  color: var(--accent-color);
   font-size: 1.3rem;
-  border-bottom: 1px solid rgba(180, 140, 255, 0.3);
+  border-bottom: 1px solid var(--accent-color-light);
   padding-bottom: 0.8rem;
   margin-bottom: 1.2rem;
 }
@@ -547,9 +552,9 @@ body::before {
 
 /* Stats Cards */
 .stat-card h2 {
-  color: #b48cff;
+  color: var(--accent-color);
   font-size: 1.1rem;
-  border-bottom: 1px solid rgba(180, 140, 255, 0.3);
+  border-bottom: 1px solid var(--accent-color-light);
   padding-bottom: 0.8rem;
   margin-bottom: 1.2rem;
 }
@@ -619,9 +624,9 @@ body::before {
 }
 
 .team-card h2 {
-  color: #b48cff;
+  color: var(--accent-color);
   font-size: 1.3rem;
-  border-bottom: 1px solid rgba(180, 140, 255, 0.3);
+  border-bottom: 1px solid var(--accent-color-light);
   padding-bottom: 0.8rem;
   margin-bottom: 1.5rem;
 }
