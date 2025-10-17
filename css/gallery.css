@@ -13,6 +13,7 @@ html, body {
     scroll-behavior: smooth;
     scrollbar-width: none;
     overflow-y: scroll;
+    overflow-x: hidden;
     font-family: 'D-DIN', sans-serif;
 }
 
