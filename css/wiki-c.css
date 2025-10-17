@@ -1,7 +1,24 @@
+/* ======================================
+  CSS COLOR VARIABLES
+====================================== */
 :root {
   --accent-color: #b48cff;
   --accent-color-light: rgba(180, 140, 255, 0.3);
+  --accent-name: #d5b3ff;
+  --accent-name-light: #a0b5d8;
+  --info-card-glow: rgba(160, 90, 255, 0.3);
+  --character-info-header: #d5b3ff;
+  --subtitle: #a58cff;
+  --button-text: #afadda;
+  --button-border: rgba(100, 150, 255, 0.4);
+  --button-background: rgba(50, 60, 90, 0.6);
+  --button-bg-hover: rgba(70, 90, 130, 0.8);
+  --button-border-hover: rgba(120, 170, 255, 0.6);
+  --stat-label: #8f7adb;
+  --base-value: #7a92c0;
+  --divider: hue-rotate(0deg);
 }
+
 
 /* ======================================
   WEBPAGE STRUCTURE STYLES
@@ -110,6 +127,7 @@ body::before {
   width: 100%;
   max-width: 600px;
   margin: 15px 0 0 0;
+  filter: var(--divider);
 }
 
 .character-description {
@@ -164,7 +182,7 @@ body::before {
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 1rem;
   padding: 1.5rem;
-  box-shadow: 0 0 20px rgba(160, 90, 255, 0.3);
+  box-shadow: 0 0 20px var(--info-card-glow);
   backdrop-filter: blur(10px);
   transition: transform 0.3s ease;
 }
@@ -272,7 +290,7 @@ body::before {
 
 .character-info-header h1 {
   font-size: 2rem;
-  color: #d5b3ff;
+  color: var(--character-info-header);
   margin-bottom: 0.2rem;
 }
 
@@ -281,7 +299,7 @@ body::before {
 }
 
 .subtitle {
-  color: #a58cff;
+  color: var(--subtitle);
   font-style: italic;
   margin-bottom: 1rem;
 }
@@ -333,9 +351,9 @@ body::before {
 }
 
 .level-btn {
-  background: rgba(50, 60, 90, 0.6);
-  border: 1px solid rgba(100, 150, 255, 0.4);
-  color: #8fadda;
+  background: var(--button-background);
+  border: 1px solid var(--button-border);
+  color: var(--button-text);
   padding: 0.4rem 0.75rem;
   border-radius: 0.4rem;
   cursor: pointer;
@@ -347,16 +365,16 @@ body::before {
 }
 
 .level-btn:hover {
-  background: rgba(70, 90, 130, 0.8);
-  border-color: rgba(120, 170, 255, 0.6);
+  background: var(--button-bg-hover);
+  border-color: var(--button-border-hover);
   transform: translateY(-2px);
 }
 
 .level-btn.active {
-  background: linear-gradient(135deg, #7a5fc8 0%, #5d4aa8 100%);
-  border-color: #8f7adb;
+  background: linear-gradient(135deg, var(--accent-color) 0%, var(--accent-color-light) 100%);
+  border-color: var(--accent-color);
   color: #fff;
-  box-shadow: 0 0 12px rgba(122, 95, 200, 0.5);
+  box-shadow: 0 0 12px var(--accent-color-light);
 }
 
 /* Stats Display Grid */
@@ -369,7 +387,7 @@ body::before {
 
 .stat-row {
   background: rgba(20, 30, 60, 0.4);
-  border: 1px solid rgba(180, 140, 255, 0.2);
+  border: 1px solid var(--accent-color-light);
   border-radius: 0.5rem;
   padding: 0.75rem;
   display: flex;
@@ -380,7 +398,7 @@ body::before {
 
 .stat-row:hover {
   background: rgba(30, 40, 70, 0.5);
-  border-color: rgba(180, 140, 255, 0.4);
+  border-color: var(--accent-color-light);
   transform: translateX(4px);
 }
 
@@ -399,7 +417,7 @@ body::before {
 }
 
 .stat-label {
-  color: #a0b5d8;
+  color: var(--stat-label);
   font-size: 0.85rem;
   font-weight: 500;
 }
@@ -411,13 +429,13 @@ body::before {
 }
 
 .base-value {
-  color: #7a92c0;
+  color: var(--base-value);
   font-size: 0.9rem;
   font-weight: 500;
 }
 
 .arrow {
-  color: #8f7adb;
+  color: var(--accent-colon);
   font-size: 1rem;
 }
 
@@ -459,6 +477,10 @@ body::before {
   max-width: 600px;
 }
 
+.build-header {
+  filter: var(--divider);
+}
+
 .build-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -497,7 +519,7 @@ body::before {
   gap: 1rem;
   padding: 0.8rem;
   background: rgba(20, 30, 60, 0.4);
-  border: 1px solid rgba(180, 140, 255, 0.2);
+  border: 1px solid var(--accent-color-light);
   border-radius: 0.5rem;
   transition: all 0.3s ease;
 }
@@ -505,7 +527,7 @@ body::before {
 .relic-item:hover,
 .lightcone-item:hover {
   background: rgba(30, 40, 70, 0.5);
-  border-color: rgba(180, 140, 255, 0.4);
+  border-color: var(--accent-color-light);
   transform: translateX(5px);
 }
 
@@ -514,7 +536,6 @@ body::before {
   flex-shrink: 0;
   width: 50px;
   height: 50px;
-  background: rgba(100, 80, 150, 0.3);
   border-radius: 0.5rem;
   display: flex;
   align-items: center;
@@ -531,7 +552,7 @@ body::before {
 
 .relic-info h3,
 .lightcone-info h3 {
-  color: #d5b3ff;
+  color: var(--accent-name);
   font-size: 1rem;
   margin: 0 0 0.5rem 0;
   font-weight: 600;
@@ -539,7 +560,7 @@ body::before {
 
 .relic-info p,
 .lightcone-info p {
-  color: #a0b5d8;
+  color: var(--accent-name-light);
   font-size: 0.85rem;
   line-height: 1.4;
   margin: 0;
@@ -570,15 +591,14 @@ body::before {
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  background: rgba(20, 30, 60, 0.4);
-  border: 1px solid rgba(180, 140, 255, 0.2);
+  border: 1px solid var(--accent-color-light);
   border-radius: 0.5rem;
   transition: all 0.3s ease;
 }
 
 .stat-priority-item:hover {
   background: rgba(30, 40, 70, 0.5);
-  border-color: rgba(180, 140, 255, 0.4);
+  border-color: var(--accent-color-light);
   transform: translateY(-2px);
 }
 
@@ -586,7 +606,7 @@ body::before {
   display: flex;
   align-items: center;
   gap: 0.8rem;
-  color: #d5b3ff;
+  color: var(--accent-color);
   font-size: 1rem;
   font-weight: 600;
 }
@@ -614,7 +634,7 @@ body::before {
 }
 
 .stat-label {
-  color: #a0b5d8;
+  color: var(--accent-name-light);
   font-size: 0.9rem;
 }
 
@@ -639,7 +659,7 @@ body::before {
 
 .team-member {
   background: rgba(20, 30, 60, 0.4);
-  border: 1px solid rgba(180, 140, 255, 0.2);
+  border: 1px solid var(--accent-color-light);
   border-radius: 0.8rem;
   padding: 1rem;
   text-align: center;
@@ -649,9 +669,9 @@ body::before {
 
 .team-member:hover {
   background: rgba(30, 40, 70, 0.6);
-  border-color: rgba(180, 140, 255, 0.5);
+  border-color: var(--accent-color-light);
   transform: translateY(-5px);
-  box-shadow: 0 5px 20px rgba(180, 140, 255, 0.3);
+  box-shadow: 0 5px 20px var(--accent-color-light);
 }
 
 .team-member img {
@@ -661,14 +681,14 @@ body::before {
 }
 
 .member-name {
-  color: #d5b3ff;
+  color: var(--accent-name);
   font-size: 1rem;
   font-weight: 600;
   margin-bottom: 0.3rem;
 }
 
 .member-role {
-  color: #8fadda;
+  color: var(--button-text);
   font-size: 0.85rem;
   font-style: italic;
 }
@@ -1150,3 +1170,4 @@ body::before {
     max-width: 900px;
   }
 }
+

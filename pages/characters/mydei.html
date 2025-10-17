@@ -5,21 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="../../css/wiki-c.css"/>
     <link rel="stylesheet" type="text/css" href="../../css/layout.css"/>
-    <script src="../../js/main.js"></script>
+    <link rel="icon" type="image/x-icon" href="../../assets/icons/favicon.webp" />
+    <title>Mydei: Astral Codex</title>
   </head>
 
   <body>
-    <div id="canvas">
+
       <!-- Navigation Bar Component -->
       <div class="navbar">
           <div id="sidebar" class="sidenav">
-              <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><img src="../../assets/icons/menu.svg"></a>
-              <a href="../../index.html">Home</a>
-              <a href="../characters.html">Characters</a>
-              <a href="../lightcones.html">Lightcones</a>
-              <a href="../locations.html">Locations</a>
-          </div>
+              <div class="sidebar-header">
+                <h2>ASTRAL CODEX</h2>
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><img src="../../assets/icons/menu.svg"></a>
+              </div>
 
+              <h3 class="sidebar-title">NAVIGATION</h3>
+
+              <nav class="sidebar-links">
+              <a href="../../index.html" class="active">
+                <img src="../../assets/icons/icon-home.svg" alt="Home Icon">
+                <span>Home</span>
+              </a>
+              <a href="../characters.html">
+                <img src="../../assets/icons/icon-character.svg" alt="Characters Icon">
+                <span>Characters</span>
+              </a>
+              <a href="../lightcones.html">
+                <img src="../../assets/icons/icon-lightcone.svg" alt="Lightcones Icon">
+                <span>Lightcones</span>
+              </a>
+              <a href="../locations.html">
+                <img src="../../assets/icons/icon-location.svg" alt="Locations Icon">
+                <span>Locations</span>
+              </a>
+            </nav>
+          </div>
 
           <span onclick="openNav()"><button id="menu-button"><img src="../../assets/icons/menu.svg"></button></span>
           <h1>ASTRAL CODEX</h1>
@@ -27,7 +47,442 @@
       </div>
 
 
+      <!-- MAIN CODE -->
+      <div class="character-profile">
+        <section class="character-header">
+          <div class="header-left">
+              <div class="character-header-top">
+                <h1 class="character-name" id="title">MYDEI</h1>
+                <div class="character-stars">
+                  <img src="../../assets/icons/5-stars.svg" alt="5 Stars">
+                </div>
+              </div>
 
-    </div>
+            <div class="divider">
+              <img src="../../assets/decorations/purple-divider.png">
+            </div>
+
+            <p class="character-description">"I am the crown prince of Kremnos 'Mydeimos,' and also the warrior of Okhema 'Mydei.' If you want to know me better, observe me in battle or fight me yourself."</p>
+
+            <div class="character-buttons">
+              <a href="#view-details"><img src="../../assets/icons/view-details.svg"></a>
+              <a href="#guides-builds"><img src="../../assets/icons/guides-builds.svg"></a>
+            </div>
+          </div>
+
+          <div class="header-right">
+            <img src="../../assets/characters/splash/mydei-splash.webp" alt="Mydei Splash Art"/>
+          </div>
+        </section>
+
+        <section class="character-info">
+          <div class="left-panel">
+            <div class="info-card basic-info">
+              <h2 id="view-details">Basic Information</h2>
+              <div class="info-grid">
+                <div class="info-item">
+                  <img src="../../assets/icons/paths/path_rememberance.svg">
+                  <strong>Erudition</strong>
+                  <p>Path Type</p>
+                </div>
+                <div class="info-item">
+                  <img src="../../assets/icons/combats/wind-type.webp">
+                  <strong>Wind</strong>
+                  <p>Combat Type</p>
+                </div>
+                <div class="info-item">
+                  <img id="stars" src="../../assets/icons/5-stars.svg">
+                  <strong id="text-stars">5-Stars</strong>
+                  <p>Rarity</p>
+                </div>
+                <div class="info-item">
+                  <img src="../../assets/icons/amphoreus-icon.svg">
+                  <strong>Amphoreus</strong>
+                  <p>Faction</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="info-card ascension-info">
+              <div class="ascension-header">
+                <h2>Ascension Stats</h2>
+                <div class="level-buttons" id="levelButtons"></div>
+              </div>
+
+              <div class="stats-display" id="statsDisplay"></div>
+            </div>
+
+
+            <div class="info-card eidolons">
+              <h2>Eidolons</h2>
+              <div class="eidolon-infos">
+
+                <h3>E1: Snowbound Maiden, Memory to Tomb</h3>
+                <p>When the enemy target's current HP is 80%/50% of Max HP or lower, the DMG dealt to it by "Boneclaw, Doomdrake's Embrace," "Claw Splits the Veil," "Breath Scorches the Shadow," and "Wings Sweep the Ruins" is 120%/140% of the original DMG respectively.</p>
+                <br>
+                <h3>E2: Crown on Wings of Bloom</h3>
+                <p>When the enemy target's current HP is 80%/50% of Max HP or lower, the DMG dealt to it by "Boneclaw, Doomdrake's Embrace," "Claw Splits the Veil," "Breath Scorches the Shadow," and "Wings Sweep the Ruins" is 120%/140% of the original DMG respectively.</p>
+                <br>
+                <h3>E3: Pious Pilgrim, Dance in Doom</h3>
+                <p>When the enemy target's current HP is 80%/50% of Max HP or lower, the DMG dealt to it by "Boneclaw, Doomdrake's Embrace," "Claw Splits the Veil," "Breath Scorches the Shadow," and "Wings Sweep the Ruins" is 120%/140% of the original DMG respectively.</p>
+                <br>
+                <h3>E4: Rest in Songs of Gloom</h3>
+                <p>When the enemy target's current HP is 80%/50% of Max HP or lower, the DMG dealt to it by "Boneclaw, Doomdrake's Embrace," "Claw Splits the Veil," "Breath Scorches the Shadow," and "Wings Sweep the Ruins" is 120%/140% of the original DMG respectively.</p>
+                <br>
+                <h3>E5: Pristine Pages, Prophecy as Plume</h3>
+                <p>When the enemy target's current HP is 80%/50% of Max HP or lower, the DMG dealt to it by "Boneclaw, Doomdrake's Embrace," "Claw Splits the Veil," "Breath Scorches the Shadow," and "Wings Sweep the Ruins" is 120%/140% of the original DMG respectively.</p>
+                <br>
+                <h3>E6: Await for Years to Loom</h3>
+                <p>When the enemy target's current HP is 80%/50% of Max HP or lower, the DMG dealt to it by "Boneclaw, Doomdrake's Embrace," "Claw Splits the Veil," "Breath Scorches the Shadow," and "Wings Sweep the Ruins" is 120%/140% of the original DMG respectively.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="info-card right-panel">
+            <div class="character-profile">
+              <div class="character-info-header">
+                <h1>Mydei</h1>
+                <p class="subtitle">The Last Prince</p>
+              </div>
+              <img class="character-image" src="../../assets/characters/full/mydei-full.webp" alt="character-image">
+            </div>
+
+            <div class="details">
+              <h2>Titles</h2>
+              <ul>
+                <li>Fleet-Footed Traveler</li>
+                <li>The Great Performer</li>
+                <li>Blasphemer</li>
+                <li>Bought of Rift</li>
+              </ul>
+
+              <h2>Release Date</h2>
+              <p>April 30, 2025</p>
+
+              <h2>World</h2>
+              <p>Amphoreus</p>
+
+              <h2>City State</h2>
+              <p>Styxia, Aidonia, Okhema</p>
+
+              <h2>Divine Authority</h2>
+              <p>Thanatos, "Hand of Shadow", Titan of Death</p>
+
+              <h2>How to Obtain</h2>
+              <p>Limited Character Event Warp</p>
+
+              <h2>English VA</h2>
+              <p>Melody Muze</p>
+
+              <h2>Chinese VA</h2>
+              <p>Ruan Congqing</p>
+
+              <h2>Korean VA</h2>
+              <p>Lee Serena</p>
+
+              <h2>Japanese VA</h2>
+              <p>Chiwa Saitô</p>
+            </div>
+
+          </div>
+        </section>
+      </div>
+
+      <section class="character-build">
+        <div class="build-header">
+          <h1 id="guides-builds">ANAXA'S BEST BUILD<br> AND TEAM</h1>
+          <div class="build-divider">
+            <img src="../../assets/decorations/purple-divider.png">
+          </div>
+        </div>
+
+        <!-- Best Relics Section -->
+        <div class="build-row">
+          <div class="info-card build-card relics-card">
+            <h2>Best Relics and Ornaments</h2>
+            <div class="relic-list">
+              <div class="relic-item">
+                <div class="relic-icon">
+                  <img src="../../assets/relics/poet-of-mourning-collapse.svg" alt="Poet of Mourning Collapse">
+                </div>
+                <div class="relic-info">
+                  <h3>Poet of Mourning Collapse</h3>
+                  <p><strong>Castorice's</strong> best-in-slot relic set since this will increase her Quantum DMG and the CRIT Rate of both her and her Memosprite.</p>
+                </div>
+              </div>
+
+              <div class="relic-item">
+                <div class="relic-icon">
+                  <img src="../../assets/relics/longevous-disciple.svg" alt="Longevous Disciple">
+                </div>
+                <div class="relic-info">
+                  <h3>Longevous Disciple</h3>
+                  <p>Another great Relic for Castorice since this provides an HP increase to Castorice and can increase her CRIT Rate whenever she consumes her HP.</p>
+                </div>
+              </div>
+
+              <div class="relic-item">
+                <div class="relic-icon">
+                  <img src="../../assets/relics/genius-of-brilliant-stars.svg" alt="Genius of Brilliant Stars">
+                </div>
+                <div class="relic-info">
+                  <h3>Genius of Brilliant Stars</h3>
+                  <p>Genius of Brilliant Stars can increase Castorice's Quantum DMG and ignore enemy DEF.<br><br>Do note that the 4pc. effect will not apply to Castorice's Memosprite.</p>
+                </div>
+              </div>
+
+              <div class="relic-item">
+                <div class="relic-icon">
+                  <img src="../../assets/relics/serene-demesne.svg" alt="Bone Collection’s Serene Demesne">
+                </div>
+                <div class="relic-info">
+                  <h3>Bone Collection’s Serene Demesne</h3>
+                  <p><strong>Castorice's</strong> best ornament as it increases her and her memosprite's CRIT DMG. The effect can be easily activated since Castorice has a lot of HP.</p>
+                </div>
+              </div>
+
+              <div class="relic-item">
+                <div class="relic-icon">
+                  <img src="../../assets/relics/arcadia-of-woven-dreams.svg" alt="Arcadia of Woven Dreams">
+                </div>
+                <div class="relic-info">
+                  <h3>Arcadia of Woven Dreams</h3>
+                  <p>Used by Castorice for the DMG buff it provides if there are more than 4 allies in combat (Memosprites included). This works if there are two or more other Remembrance characters in the party.</p>
+                </div>
+              </div>
+
+              <div class="relic-item">
+                <div class="relic-icon">
+                  <img src="../../assets/relics/wondrous-bananamusement-park.svg" alt="The Wondrous BananAmusement Park">
+                </div>
+                <div class="relic-info">
+                  <h3>The Wondrous BananAmusement Park</h3>
+                  <p>The third-best option since it can increase Castorice's CRIT DMG as long as her Memosprite is on the field.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Best Lightcones Section -->
+          <div class="info-card build-card lightcones-card">
+            <h2>Best Lightcones</h2>
+            <div class="lightcone-list">
+              <div class="lightcone-item">
+                <div class="lightcone-icon">
+                  <img src="../../assets/lightcones/item/make-farewells-more-beautiful.svg" alt="Make Farewells More Beautiful">
+                </div>
+                <a href="../lightcones/make_farewells_more_beautiful.html"><div class="lightcone-info">
+                  <h3>Make Farewells More Beautiful</h3>
+                  <p><strong>Castorice's</strong> best-in-slot Light Cone that provides a huge boost in HP and can ignore enemy DEF. This will also advance Castorice in the turn order when her memosprite disappears.</p>
+                </div></a>
+              </div>
+
+              <div class="lightcone-item">
+                <div class="lightcone-icon">
+                  <img src="../../assets/lightcones/item/flower-remembers.svg" alt="The Flower Remembers">
+                </div>
+                <div class="lightcone-info">
+                  <h3>The Flower Remembers</h3>
+                  <p>Castorice's best 4-star Light Cone since this provides CRIT DMG and her Memosprite deals increased CRIT DMG.</p>
+                </div>
+              </div>
+
+              <div class="lightcone-item">
+                <div class="lightcone-icon">
+                  <img src="../../assets/lightcones/item/sweat-now-cry-less.svg" alt="Sweat Now, Cry Less">
+                </div>
+                <div class="lightcone-info">
+                  <h3>Sweat Now, Cry Less</h3>
+                  <p>Another great 4-star Light Cone since this provides a CRIT Rate boost and increased DMG for when her Memosprite deals DMG.</p>
+                </div>
+              </div>
+
+              <div class="lightcone-item">
+                <div class="lightcone-icon">
+                  <img src="../../assets/lightcones/item/flame-afar.svg" alt="Flame Afar">
+                </div>
+                <div class="lightcone-info">
+                  <h3>Flame Afar</h3>
+                  <p>A F2P option for players that can be used for temporary solution because its ATK-scaling effect is not beneficial for Castorice’s HP-scaling kit.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Main Stats and Sub Stats Section -->
+        <div class="build-row stats-row">
+          <div class="info-card stat-card main-stats">
+            <h2>Main Stats</h2>
+            <div class="stat-priority-list">
+              <div class="stat-priority-item">
+                <span class="stat-name">
+                  <img src="../../assets/icons/main-body.svg" alt="HP">
+                  Body:
+                </span>
+                <span class="stat-importance">
+                  <span class="stat-label">CRIT DMG</span>
+                </span>
+              </div>
+              <div class="stat-priority-item">
+                <span class="stat-name">
+                  <img src="../../assets/icons/main-feet.svg" alt="Feet">
+                  Feet
+                </span>
+                <span class="stat-importance">
+                  <span class="stat-label">HP%</span>
+                </span>
+              </div>
+              <div class="stat-priority-item">
+                <span class="stat-name">
+                  <img src="../../assets/icons/main-sphere.svg" alt="Sphere">
+                  Sphere
+                </span>
+                <span class="stat-importance">
+                  <span class="stat-label">HP% or Quantum DMG%</span>
+                </span>
+              </div>
+              <div class="stat-priority-item">
+                <span class="stat-name">
+                  <img src="../../assets/icons/main-rope.svg" alt="Rope">
+                  Rope
+                </span>
+                <span class="stat-importance">
+                  <span class="stat-label">HP%</span>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="info-card stat-card sub-stats">
+            <h2>Sub Stats</h2>
+            <div class="stat-priority-list">
+              <div class="stat-priority-item">
+                <span class="stat-name">
+                  <img src="../../assets/icons/base-hp.svg" alt="HP">
+                  HP%
+                </span>
+                <span class="stat-importance">
+                  <span class="star-filled">⭐⭐⭐</span>
+                </span>
+              </div>
+              <div class="stat-priority-item">
+                <span class="stat-name">
+                  <img src="../../assets/icons/base-crt.svg" alt="CRIT Rate">
+                  CRIT Rate
+                </span>
+                <span class="stat-importance">
+                  <span class="star-filled">⭐⭐⭐</span>
+                </span>
+              </div>
+              <div class="stat-priority-item">
+                <span class="stat-name">
+                  <img src="../../assets/icons/base-cdmg.svg" alt="CRIT DMG">
+                  CRIT DMG
+                </span>
+                <span class="stat-importance">
+                  <span class="star-filled">⭐⭐</span>
+                </span>
+              </div>
+              <div class="stat-priority-item">
+                <span class="stat-name">
+                  <img src="../../assets/icons/flat-hp.svg" alt="Flat HP">
+                  Flat HP
+                </span>
+                <span class="stat-importance">
+                  <span class="star-filled">⭐</span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="info-card team-card">
+          <h2>Best Premium Team</h2>
+          <div class="team-grid">
+            <div class="team-member">
+              <img src="../../assets/characters/icons/castorice-icon.svg" alt="Castorice">
+              <div class="member-name">Castorice</div>
+              <div class="member-role">Main DPS</div>
+            </div>
+            <div class="team-member">
+              <img src="../../assets/characters/icons/trailblazer-ice-icon.svg" alt="Trailblazer (Ice)">
+              <div class="member-name">Trailblazer (Ice)</div>
+              <div class="member-role">Support</div>
+            </div>
+            <div class="team-member">
+              <img src="../../assets/characters/icons/tribbie-icon.svg" alt="Tribbie">
+              <div class="member-name">Tribbie</div>
+              <div class="member-role">Buffer</div>
+            </div>
+            <div class="team-member">
+              <img src="../../assets/characters/icons/hyacine-icon.svg" alt="Hyacine">
+              <div class="member-name">Hyacine</div>
+              <div class="member-role">Sustain</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-card team-card">
+          <h2>Best F2P Team</h2>
+          <div class="team-grid">
+            <div class="team-member">
+              <img src="../../assets/characters/icons/castorice-icon.svg" alt="Castorice">
+              <div class="member-name">Castorice</div>
+              <div class="member-role">Main DPS</div>
+            </div>
+            <div class="team-member">
+              <img src="../../assets/characters/icons/trailblazer-ice-icon.svg" alt="Trailblazer (Ice)">
+              <div class="member-name">Trailblazer (Ice)</div>
+              <div class="member-role">Support</div>
+            </div>
+            <div class="team-member">
+              <img src="../../assets/characters/icons/pela-icon.svg" alt="Pela">
+              <div class="member-name">Pela</div>
+              <div class="member-role">Debuff</div>
+            </div>
+            <div class="team-member">
+              <img src="../../assets/characters/icons/lynx-icon.svg" alt="Lynx">
+              <div class="member-name">Lynx</div>
+              <div class="member-role">Sustain</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- IGNORE -->
+      <footer>
+        <div class="footer-left">
+          <div class="footer-logos">
+            <img class="footer-img" src="../../assets/icons/hsr_logo.png" />
+            <img class="footer-img" src="../../assets/icons/mihoyo-logo.svg" />
+          </div>
+
+          <p>All Assets are taken from Honkai: Star Rail.<br>All Educational Purposes Only.<br>Made by <strong>Prince Pamintuan</strong>, 2025.</p>
+          <a href="#title" id="back-top" >Back to Top</a>
+        </div>
+
+        <div class="footer-right">
+          <div class="footer-section">
+            <p><strong>Site Map</strong></p>
+            <a href="../index.html"><p>Home Page</p></a>
+            <a href="characters.html"><p>Characters</p></a>
+            <a href="#title"><p><u>Lightcones</u></p></a>
+            <a href="locations.html"><p>Locations</p></a>
+          </div>
+
+          <div class="footer-section">
+            <p><strong>Legal</strong></p>
+            <p>Privacy Policy</p>
+            <p>Fair Use</p>
+            <p>Terms of Services</p>
+          </div>
+        </div>
+      </footer>
+
+  <script src="../../js/main.js"></script>
+  <script src="../../js/ThemeLoader.js"></script>
   </body>
 </html>
