@@ -259,5 +259,34 @@
       "baseValue": "#aee9ff",
       "divider": "hue-rotate(280deg)"
     }
+  },
+  "hysilens": {
+    "levels": [
+      { "level": 1, "hp": 185, "atk": 84, "def": 66, "spd": 95 },
+      { "level": 20, "hp": 360, "atk": 164, "def": 128, "spd": 99 },
+      { "level": 30, "hp": 527, "atk": 240, "def": 188, "spd": 99 },
+      { "level": 40, "hp": 693, "atk": 316, "def": 247, "spd": 99 },
+      { "level": 50, "hp": 859, "atk": 392, "def": 306, "spd": 99 },
+      { "level": 60, "hp": 1026, "atk": 468, "def": 366, "spd": 99 },
+      { "level": 70, "hp": 1192, "atk": 544, "def": 425, "spd": 99 },
+      { "level": 80, "hp": 1358, "atk": 620, "def": 485, "spd": 99 }
+    ],
+    "theme": {
+      "accentColor": "#3ca9f4",
+      "accentColorLight": "rgba(60, 169, 244, 0.3)",
+      "accentName": "#7fd4ff",
+      "accentNameLight": "#aee9ff",
+      "infoCardGlow": "rgba(60, 169, 244, 0.3)",
+      "characterInfoHeader": "#b7e5ff",
+      "subtitle": "#4db0ff",
+      "buttonText": "#d0f2ff",
+      "buttonBorder": "rgba(60, 169, 244, 0.4)",
+      "buttonBackground": "rgba(25, 35, 60, 0.6)",
+      "buttonBgHover": "rgba(35, 45, 70, 0.8)",
+      "buttonBorderHover": "rgba(60, 169, 244, 0.6)",
+      "statLabel": "#6ac8ff",
+      "baseValue": "#aee9ff",
+      "divider": "hue-rotate(280deg)"
+    }
   }
 }
