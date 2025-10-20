@@ -1,6 +1,22 @@
+/* ======================================
+  CSS COLOR VARIABLES
+====================================== */
 :root {
   --accent-color: #b48cff;
   --accent-color-light: rgba(180, 140, 255, 0.3);
+  --accent-name: #d5b3ff;
+  --accent-name-light: #a0b5d8;
+  --info-card-glow: rgba(160, 90, 255, 0.3);
+  --character-info-header: #d5b3ff;
+  --subtitle: #a58cff;
+  --button-text: #afadda;
+  --button-border: rgba(100, 150, 255, 0.4);
+  --button-background: rgba(50, 60, 90, 0.6);
+  --button-bg-hover: rgba(70, 90, 130, 0.8);
+  --button-border-hover: rgba(120, 170, 255, 0.6);
+  --stat-label: #8f7adb;
+  --base-value: #7a92c0;
+  --divider: hue-rotate(0deg);
 }
 
 /* ======================================
@@ -69,6 +85,12 @@ body::before {
   max-width: 1100px;
   margin-bottom: 2rem;
 }
+
+
+.character-info-img {
+  width: 250px;
+}
+
 
 .header-left {
   flex: 1;
@@ -140,7 +162,6 @@ body::before {
 .character-info {
   display: grid;
   grid-template-columns: 2fr 1.2fr;
-  gap: 1.5rem;
   color: #FFF;
   align-items: start;
   justify-content: center;
