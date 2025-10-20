@@ -2,21 +2,21 @@
   CSS COLOR VARIABLES
 ====================================== */
 :root {
-  --accent-color: #b48cff;
-  --accent-color-light: rgba(180, 140, 255, 0.3);
-  --accent-name: #d5b3ff;
-  --accent-name-light: #a0b5d8;
-  --info-card-glow: rgba(160, 90, 255, 0.3);
-  --character-info-header: #d5b3ff;
-  --subtitle: #a58cff;
-  --button-text: #afadda;
-  --button-border: rgba(100, 150, 255, 0.4);
-  --button-background: rgba(50, 60, 90, 0.6);
-  --button-bg-hover: rgba(70, 90, 130, 0.8);
-  --button-border-hover: rgba(120, 170, 255, 0.6);
-  --stat-label: #8f7adb;
-  --base-value: #7a92c0;
-  --divider: hue-rotate(0deg);
+  --accent-color: #eed760; /* main gold */
+  --accent-color-light: rgba(255, 215, 0, 0.3); /* light glow */
+  --accent-name: #FFF8DC; /* text highlight */
+  --accent-name-light: #B8860B; /* darker accent */
+  --info-card-glow: rgba(255, 215, 0, 0.3);
+  --character-info-header: #FFD700;
+  --subtitle: #DAA520; /* goldenrod */
+  --button-text: #FFF8DC;
+  --button-border: rgba(184, 134, 11, 0.4);
+  --button-background: rgba(80, 60, 20, 0.6);
+  --button-bg-hover: rgba(120, 90, 30, 0.8);
+  --button-border-hover: rgba(184, 134, 11, 0.6);
+  --stat-label: #B8860B;
+  --base-value: #DAA520;
+  --divider: hue-rotate(120deg) brightness(200%);
 }
 
 /* ======================================
@@ -128,6 +128,7 @@ body::before {
   width: 100%;
   max-width: 1000px;
   margin: 15px 0 0 0;
+  filter: var(--divider);
 }
 
 .character-description {
@@ -181,7 +182,7 @@ body::before {
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 1rem;
   padding: 1.5rem;
-  box-shadow: 0 0 20px rgba(160, 90, 255, 0.3);
+  box-shadow: 0 0 20px var(--accent-color-light);
   backdrop-filter: blur(10px);
   transition: transform 0.3s ease;
 }
@@ -228,7 +229,7 @@ body::before {
 
 .character-info-header h1 {
   font-size: 1.5rem;
-  color: #d5b3ff;
+  color: var(--accent-name);
   margin-bottom: 1rem;
 }
 
@@ -283,9 +284,9 @@ body::before {
 }
 
 .level-btn {
-  background: rgba(50, 60, 90, 0.6);
-  border: 1px solid rgba(100, 150, 255, 0.4);
-  color: #8fadda;
+  background: var(--button-background);
+  border: 1px solid var(--button-border);
+  color: var(--accent-color);
   padding: 0.4rem 0.75rem;
   border-radius: 0.4rem;
   cursor: pointer;
@@ -297,16 +298,16 @@ body::before {
 }
 
 .level-btn:hover {
-  background: rgba(70, 90, 130, 0.8);
-  border-color: rgba(120, 170, 255, 0.6);
+  background: var(--button-bg-hover);
+  border-color: var(--button-border-hover);
   transform: translateY(-2px);
 }
 
 .level-btn.active {
-  background: linear-gradient(135deg, #7a5fc8 0%, #5d4aa8 100%);
-  border-color: #8f7adb;
+  background: linear-gradient(135deg, var(--accent-color) 0%, var(--accent-color-light) 100%);
+  border-color: var(--accent-color);
   color: #fff;
-  box-shadow: 0 0 12px rgba(122, 95, 200, 0.5);
+  box-shadow: 0 0 12px var(--accent-color-light);
 }
 
 /* Stats Display Grid */
@@ -319,7 +320,7 @@ body::before {
 
 .stat-row {
   background: rgba(20, 30, 60, 0.4);
-  border: 1px solid rgba(180, 140, 255, 0.2);
+  border: 1px solid var(--accent-color-light);
   border-radius: 0.5rem;
   padding: 0.75rem;
   display: flex;
@@ -329,8 +330,8 @@ body::before {
 }
 
 .stat-row:hover {
-  background: rgba(30, 40, 70, 0.5);
-  border-color: rgba(180, 140, 255, 0.4);
+  background: var(--button-background);
+  border-color: var(--button-border);
   transform: translateX(4px);
 }
 
@@ -349,7 +350,7 @@ body::before {
 }
 
 .stat-label {
-  color: #a0b5d8;
+  color: var(--accent-color);
   font-size: 0.85rem;
   font-weight: 500;
 }
@@ -361,7 +362,7 @@ body::before {
 }
 
 .base-value {
-  color: #7a92c0;
+  color: var(--base-value);
   font-size: 0.9rem;
   font-weight: 500;
 }
