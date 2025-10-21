@@ -1,2 +1,8 @@
 Roadmap:
-1. Importing All Text Sources for Wikipedia
+1. Already Complete all the remaining tasks
+
+Future Plan for Improvements:
+1. Refix Index Page
+2. Create a Wiki Tool to avoid hardcoding the informations
+3. Settings Menu for Changing Themes
+

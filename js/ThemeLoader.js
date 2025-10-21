@@ -1,9 +1,8 @@
 /* ==========================================
-   DYNAMIC THEME SYSTEM - THEME LOADER
+   DYNAMIC THEME SYSTEM
    Loads themes from characters.json
    ========================================== */
 
-// Global state
 let charactersData = null;
 let currentCharacter = null;
 
@@ -59,7 +58,6 @@ function applyThemeColors(themeData) {
  * Uses multiple detection methods for reliability
  */
 function detectCharacter() {
-  // Method 1: Check for data-character attribute on body or any element
   const characterElement = document.querySelector('[data-character]');
   if (characterElement) {
     const charName = characterElement.getAttribute('data-character').toLowerCase();
@@ -67,7 +65,6 @@ function detectCharacter() {
     return charName;
   }
 
-  // Method 2: Extract from URL pathname (e.g., /pages/characters/anaxa.html)
   const path = window.location.pathname;
   const match = path.match(/\/([^\/]+)\.html$/);
   if (match) {
@@ -79,7 +76,6 @@ function detectCharacter() {
     }
   }
 
-  // Method 3: Check for specific class on body (e.g., class="page-anaxa")
   const bodyClasses = Array.from(document.body.classList);
   for (const className of bodyClasses) {
     if (className.startsWith('character-') || className.startsWith('page-')) {
@@ -91,7 +87,6 @@ function detectCharacter() {
     }
   }
 
-  // Method 4: Check the page title or character name element
   const titleElement = document.querySelector('.character-name, h1#title');
   if (titleElement) {
     const titleText = titleElement.textContent.toLowerCase().trim();
@@ -126,17 +121,13 @@ function applyCharacterTheme(characterName) {
     return false;
   }
 
-  // Apply the theme colors
   applyThemeColors(characterData.theme);
 
-  // Add character-specific class to body for additional styling
   document.body.classList.add(`theme-${characterName}`);
   document.body.setAttribute('data-current-theme', characterName);
 
-  // Store current character
   currentCharacter = characterName;
 
-  // Dispatch custom event for theme change
   const themeChangeEvent = new CustomEvent('themeChanged', {
     detail: {
       character: characterName,
@@ -154,8 +145,6 @@ function applyCharacterTheme(characterName) {
  */
 async function initThemeSystem() {
   console.log('=== Theme System Initializing ===');
-
-  // Load character data
   const loaded = await loadCharactersData();
 
   if (!loaded) {
@@ -163,14 +152,11 @@ async function initThemeSystem() {
     return;
   }
 
-  // Detect current character
   const character = detectCharacter();
 
   if (character) {
-    // Apply character-specific theme
     applyCharacterTheme(character);
   } else {
-    // Apply default theme (castorice)
     console.log('→ Applying default theme (castorice)');
     if (charactersData && charactersData['castorice']) {
       applyCharacterTheme('castorice');
@@ -180,10 +166,6 @@ async function initThemeSystem() {
   console.log('=== Theme System Ready ===');
 }
 
-/**
- * Manually set a theme (useful for testing or theme switchers)
- * @param {string} characterName - The name of the character
- */
 function setTheme(characterName) {
   characterName = characterName.toLowerCase();
 
@@ -207,27 +189,14 @@ function setTheme(characterName) {
   return false;
 }
 
-/**
- * Get the current active theme
- * @returns {string|null} The current character name
- */
 function getCurrentTheme() {
   return currentCharacter;
 }
 
-/**
- * Get all available themes
- * @returns {string[]} Array of character names
- */
 function getAvailableThemes() {
   return charactersData ? Object.keys(charactersData) : [];
 }
 
-/**
- * Get theme data for a specific character
- * @param {string} characterName - The name of the character
- * @returns {object|null} The theme data object
- */
 function getThemeData(characterName) {
   if (!charactersData || !charactersData[characterName]) {
     return null;
@@ -235,14 +204,12 @@ function getThemeData(characterName) {
   return charactersData[characterName].theme;
 }
 
-// Initialize when DOM is ready
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', initThemeSystem);
 } else {
   initThemeSystem();
 }
 
-// Re-apply theme when navigating back to page (for SPAs or cached pages)
 window.addEventListener('pageshow', function(event) {
   if (event.persisted && currentCharacter) {
     console.log('→ Page restored from cache, reapplying theme');
@@ -250,7 +217,6 @@ window.addEventListener('pageshow', function(event) {
   }
 });
 
-// Export functions for external use
 if (typeof window !== 'undefined') {
   window.ThemeSystem = {
     setTheme,
