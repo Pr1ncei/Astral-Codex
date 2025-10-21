@@ -5,4 +5,5 @@ Future Plan for Improvements:
 1. Refix Index Page
 2. Create a Wiki Tool to avoid hardcoding the informations
 3. Settings Menu for Changing Themes
-
+4. Increase the list of Characters
+  - Prerequisite: Complete #2 
